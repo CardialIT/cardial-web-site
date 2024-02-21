@@ -135,7 +135,7 @@
     justify-content: center;
   }
 
-  .footer-right button {
+  .footer-button {
     width: 100%;
     font-weight: 400;
   }
@@ -173,4 +173,27 @@
     height: 8rem;
   }
   
+}
+
+@media (max-width: 425px) {
+  .container-footer {
+    padding: 1;
+  }
+
+  .section-top {
+    height: 84vw;
+    padding-top: 2rem;
+  }
+
+  .footer-left {
+    width: 100%;
+  }
+
+  .footer-right{
+    padding: 0;  
+  }
+
+  .footer-button{ 
+    width: 116%; 
+  }
 }

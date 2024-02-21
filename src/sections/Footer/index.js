@@ -25,7 +25,7 @@ function Footer() {
         <div className="footer-right">
           <p>Venha nos conhecer!</p>
 
-          <button>Entrar em contato</button>
+          <button className="footer-button">Entrar em contato</button>
 
         </div>
 
