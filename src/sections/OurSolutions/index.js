@@ -14,17 +14,16 @@ import "./styles.css";
 
 function OurSolutions() {
   return (
-    <>
-      <div className="section">
-        <div className="main-title">
-          <h3 className="secondary-title">Nossas Soluções</h3>
-          <h1 className="subtitle">Conheça algumas das nossas soluções</h1>
-          <p className="text">
-            Descubra o poder da tecnologia conosco e transforme seus desafios em
-            oportunidades. Sua jornada para a excelência começa aqui.
-          </p>
-        </div>
-        <Roll right> 
+    <div className="section">
+      <div className="main-title">
+        <h3 className="secondary-title">Nossas Soluções</h3>
+        <h1 className="subtitle">Conheça algumas das nossas soluções</h1>
+        <p className="text">
+          Descubra o poder da tecnologia conosco e transforme seus desafios em
+          oportunidades. Sua jornada para a excelência começa aqui.
+        </p>
+      </div>
+      <Roll right>
         <div className="section-one">
           <div className="section-txt">
             <img src={Phone} />
@@ -51,29 +50,28 @@ function OurSolutions() {
               Crescimento Estratégico
             </p>
             <Tilt
-        className="tilt"
-        options={{ max: 25 }}
-        style={{ height: 50, width: 250 }}
-      >
-            <button href="/">SAIBA MAIS</button>
+              className="tilt"
+              options={{ max: 25 }}
+              style={{ height: 50, width: 250 }}
+            >
+              <button href="/">SAIBA MAIS</button>
             </Tilt>
           </div>
 
-          <div id="section-mockup"className="section-img">
+          <div id="section-mockup" className="section-img">
             <img src={MockUp} />
           </div>
         </div>
-        </Roll>
+      </Roll>
 
-        <Roll left>
-
-        <div className="second-section">
-          <div className="left-img">
+      <Roll right>
+        <div className="section-app">
+          <div className="section-img">
             <img src={Couple} />
           </div>
+          <div className="section-txt">
+            <img src={Mail} />
 
-          <div className="section-right">
-            <img className="iconLight" src={Lightning} />
             <h1 className="section-txt-title">
               Desenvolvimento de Apps Sob Medida
             </h1>
@@ -102,18 +100,19 @@ function OurSolutions() {
               <img className="text-item-img" src={Check} alt="Check Icon" />
               Soluções Integradas
             </p>
+
             <Tilt
-        className="tilt"
-        options={{ max: 25 }}
-        style={{ height: 50, width: 250 }}
-      >
-            <button href="/">SAIBA MAIS</button>
+              className="tilt"
+              options={{ max: 25 }}
+              style={{ height: 50, width: 250 }}
+            >
+              <button href="/">SAIBA MAIS</button>
             </Tilt>
           </div>
         </div>
-        </Roll>
+      </Roll>
 
-        <Roll right>
+      <Roll right>
         <div className="section-web-d">
           <div className="section-txt">
             <img src={Mail} />
@@ -141,11 +140,11 @@ function OurSolutions() {
               SEO Poderoso
             </p>
             <Tilt
-        className="tilt"
-        options={{ max: 25 }}
-        style={{ height: 50, width: 250 }}
-      >
-            <button href="/">SAIBA MAIS</button>
+              className="tilt"
+              options={{ max: 25 }}
+              style={{ height: 50, width: 250 }}
+            >
+              <button href="/">SAIBA MAIS</button>
             </Tilt>
           </div>
 
@@ -153,9 +152,8 @@ function OurSolutions() {
             <img src={LoremIpsum} />
           </div>
         </div>
-        </Roll>
-      </div>
-    </>
+      </Roll>
+    </div>
   );
 }
 

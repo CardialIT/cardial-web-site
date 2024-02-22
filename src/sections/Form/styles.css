@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+:root {
+  --mainColor: #bf3475;
+  --secondaryColor: #fff;
+  --hoverColor: #c93e75;
+  --titleColor: #101828;
+  --txtColor: #667085;
+  --backgroundColor: #faf9fa;
+  --mainFont: "Montserrat", sans-serif;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  text-align: center;
+  background-color: var(--backgroundColor);
+  font-family: var(--mainFont);
+  margin-top: 5vh;
+}
+.section-txt {
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+  padding-right: 6rem;
+  height: 538px;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--backgroundColor);
+
+  margin-top: 0;
+}
+.section-right {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  text-align: start;
+}
+
+.formLayout {
+  display: flex;
+  width: 576px;
+  height: 768px;
+  margin-left: auto;
+  margin-bottom: auto;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: end;
+}
+
+.left-img {
+  display: flex;
+  width: 530px;
+  height: 760px;
+  margin-left: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+  padding-top: auto;
+}
+
+.section-txt-subtitle {
+  width: 100%;
+  font-size: 20px;
+  color: var(--txtColor);
+  margin-bottom: 20px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-message {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  color: #888;
+  font-size: 14px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.input-container input:focus + .input-message {
+  opacity: 0;
+}
+
+.h2Title {
+  display: flex;
+}
+
+.form-container {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  text-align: start;
+  position: flex;
+  bottom: 10px;
+  left: 1rem;
+  padding: 3px;
+  background-color: var(--backgroundColor);
+  width: 30rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.form label {
+  font-size: 16;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 5;
+}
+
+.form input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+.form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.form textarea {
+  resize: vertical;
+  padding: 2rem;
+}
+
+button {
+  background-color: var(--mainColor);
+  width: 100%;
+  height: 54px;
+  border-radius: 8px;
+  border: 1px;
+  padding: 16px 28px;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--secondaryColor);
+  margin-top: 32px;
+}

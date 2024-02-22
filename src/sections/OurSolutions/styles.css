@@ -25,13 +25,22 @@
 .second-section {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-right: 1rem;
   padding-top: 6rem;
-
+  padding-left: 6rem;
+  align-items: center;
+  padding-bottom: 2rem;
 }
 
 .section-web-d {
+  display: flex;
+  flex-direction: row;
+  padding-top: 6rem;
+  padding-left: 6rem;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.section-app {
   display: flex;
   flex-direction: row;
   padding-top: 6rem;
@@ -65,13 +74,11 @@
 }
 
 .section-one {
-
   display: flex;
   margin: 20px 0 0 80px;
 }
 
 .right-section {
-
   width: 100%;
   justify-content: flex-end;
   align-items: flex-end;
@@ -87,6 +94,26 @@
   padding-right: 6rem;
   height: 538px;
 }
+.section-d {
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: end;
+  padding-right: 6rem;
+  height: 538px;
+}
+
+/* .section-d img,
+.section-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-right: 0rem;
+  padding: 0px 10px 0px 10px;
+} */
 
 .section-right {
   max-width: 100%;
@@ -96,7 +123,6 @@
   text-align: start;
   padding-top: 2.5rem;
   padding-left: 40px;
-
 }
 
 .section-txt-title {
@@ -127,7 +153,7 @@
 
 .text-item-img {
   margin-right: 10px;
-  width: 28px;
+  width: auto;
 }
 
 button {
@@ -144,24 +170,8 @@ button {
   margin-top: 32px;
 }
 
-.section-img {
-  width: 100%;
-  justify-content: flex-end;
-  align-items: flex-end;
-  text-align: end;
-  height: 538px;
-}
-
-.section-txt img,
-.section-img img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-}
-
 #section-mockup {
   margin-top: -43px;
-
 }
 
 .left-img {
@@ -169,12 +179,13 @@ button {
   justify-content: flex-start;
   align-items: flex-start;
   text-align: start;
-  padding-top: 5px;
+  height: 538px;
 }
 
+.section-txt img,
 .left-img img {
   max-width: 100%;
-  height: 538px;
+  height: auto;
   margin-bottom: 15px;
 }
 
@@ -186,10 +197,8 @@ button {
   padding-bottom: 1.5rem;
 }
 
-
 @media (max-width: 732px) {
   .section {
-
     margin-top: 10vh;
   }
 
@@ -207,7 +216,6 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
 
   .section-txt-title {
@@ -224,7 +232,6 @@ button {
   }
 
   .section-txt {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -235,6 +242,17 @@ button {
   }
 
   .section-web-d {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0rem;
+    padding-left: 0rem;
+    align-items: center;
+    padding-bottom: 0rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-app {
     display: flex;
     flex-direction: column;
     padding-top: 0rem;
@@ -256,12 +274,13 @@ button {
 
   .second-section {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    padding-top: 0rem;
+    padding-left: 0rem;
+    align-items: center;
+    padding-bottom: 0rem;
     justify-content: center;
     align-items: center;
-    margin-right: 0rem;
-    padding-top: 0rem;
-
   }
 
   .section-right {
@@ -282,7 +301,6 @@ button {
     align-items: center;
     text-align: center;
     margin-top: 50px;
-
   }
 
   .left-img img {
@@ -291,7 +309,5 @@ button {
 
   .text-item-img {
     align-items: start;
-    
   }
-
 }
