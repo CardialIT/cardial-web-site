@@ -196,4 +196,8 @@
   .footer-button{ 
     width: 116%; 
   }
+
+  .divider{
+    width: 70vw;
+  }
 }
