@@ -15,13 +15,13 @@ function Highlights() {
       <div className="container-title-animate">
         <TypeAnimation
           cursor={true}
-          sequence={["Construa o futuro do seu negócio!", 10000, ""]}
+          sequence={["Potencializando seu negócio com tecnologia!", 10000, ""]}
           wrapper="h1"
           repeat={Infinity}
           className="animated-text"
         />
 
-        <h1 className="title-banner">Construa o futuro do seu negócio!</h1>
+        <h1 className="title-banner">Potencializando seu negócio com tecnologia!</h1>
         </div>
     
      <p>
@@ -35,7 +35,7 @@ function Highlights() {
         style={{ height: 50, width: 250 }}
       >
         <button className="button-insight">
-         Fale Conosco
+       <a href="https://api.whatsapp.com/send?phone=5541996745640&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)">  Fale Conosco </a>
           <FiSend className="icon-send" />
         </button>
       </Tilt>

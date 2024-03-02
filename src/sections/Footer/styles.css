@@ -100,6 +100,10 @@
   height: 40px;
  }
 
+ .footer-button a {
+  color: white;
+}
+
 @media (max-width: 732px) {
   .container-footer{
     background-color: #3A414F;
@@ -139,6 +143,8 @@
     width: 100%;
     font-weight: 400;
   }
+
+  
 
   .divider{
     width: 82vw;

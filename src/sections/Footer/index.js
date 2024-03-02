@@ -14,9 +14,9 @@ function Footer() {
           <img src={LogoBranco} />
 
           <div className="links-footer">
-            <a>Home</a>
+            {/* <a>Home</a>
             <a>Sobre Nós</a>
-            <a>Produtos</a>
+            <a>Produtos</a> */}
           </div>
 
 
@@ -25,7 +25,8 @@ function Footer() {
         <div className="footer-right">
           <p>Venha nos conhecer!</p>
 
-          <button className="footer-button">Entrar em contato</button>
+          <button className="footer-button">
+            <a href="https://api.whatsapp.com/send?phone=5541996745640&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)">Entrar em contato</a></button>
 
         </div>
 

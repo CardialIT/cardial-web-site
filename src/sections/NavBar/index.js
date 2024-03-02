@@ -28,7 +28,7 @@ const toggleMenu = () => {
 
       <div className="links">
  
-          <a className="link" href="#sobre">
+          {/* <a className="link" href="#sobre">
             Sobre
           </a>
    
@@ -42,7 +42,7 @@ const toggleMenu = () => {
  
           <a className="link" href="#experiencia">
             Equipe
-          </a>
+          </a> */}
     
         
       </div>
@@ -55,16 +55,16 @@ const toggleMenu = () => {
         style={{ height: 50, width: 250 }}
       >
       <div className="botao">
-        <a className="contato" href="#contato">
+        <a className="contato" href="https://api.whatsapp.com/send?phone=5541996745640&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)">
           ENTRAR EM CONTATO
         </a>
       </div>
       </Tilt>
 
-
+{/* 
       <a  className="button-menu-hamburguer" onClick={toggleMenu}>
   <GiHamburgerMenu className="hamburguer-icon" />
-</a>
+</a> */}
 
 <Roll right>
 <div className={`popup-menu ${isOpen ? "open" : ""}`}>

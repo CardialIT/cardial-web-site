@@ -55,7 +55,7 @@ function OurSolutions() {
         options={{ max: 25 }}
         style={{ height: 50, width: 250 }}
       >
-            <button href="/">SAIBA MAIS</button>
+            <button> <a className="link-to-form" href="#formulario">SAIBA MAIS</a></button>
             </Tilt>
           </div>
 
@@ -107,7 +107,11 @@ function OurSolutions() {
         options={{ max: 25 }}
         style={{ height: 50, width: 250 }}
       >
-            <button href="/">SAIBA MAIS</button>
+            <button> 
+            <a className="link-to-form" href="#formulario">
+              SAIBA MAIS
+             </a>
+              </button>
             </Tilt>
           </div>
         </div>
@@ -145,7 +149,11 @@ function OurSolutions() {
         options={{ max: 25 }}
         style={{ height: 50, width: 250 }}
       >
-            <button href="/">SAIBA MAIS</button>
+            <button>
+            <a className="link-to-form" href="#formulario">
+              SAIBA MAIS
+             </a>
+            </button>
             </Tilt>
           </div>
 

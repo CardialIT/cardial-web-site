@@ -186,12 +186,21 @@ button {
   padding-bottom: 1.5rem;
 }
 
+.link-to-form{
+  color: white;
+}
 
 @media (max-width: 732px) {
   .section {
 
     margin-top: 10vh;
   }
+
+  
+.main-title{
+
+margin-bottom: -80px;
+}
 
   .main-title h1 {
     font-size: 30px;

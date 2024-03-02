@@ -4,7 +4,7 @@ import "./styles.css";
 function OurTeam() {
   return (
     <div className="section-know-us">
-      <div className="main-title">
+      <div className="about-us-main">
         <h3 className="secondary-title">Sobre nós</h3>
         <h1 className="subtitle">Conheça nossa equipe</h1>
         <p className="text">

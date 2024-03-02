@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormIMG from "../../assets/FormIMG.jpg";
+import FormIMG from "../../assets/FormIMG.png";
 import Tilt from "react-tilt";
 import "./styles.css";
 
@@ -18,20 +18,22 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="section">
-      <div className="second-section">
-        <div className="left-img">
+   
+      <div className="call-us" id="formulario">
+        <div className="call-us-left">
           <img src={FormIMG} />
         </div>
-        <div className="formLayout">
-          <div className="form-container">
+    
+        
             <form className="form" onSubmit={handleSubmit}>
               <h2 className="h2Title">Fale Conosco</h2>
+            
               <h3 className="section-txt-subtitle">
                 Ganhe uma avaliação gratuita da sua ideia
               </h3>
+            
               <label htmlFor="nome">Nome</label>
-              <div className="input-container">
+             
                 <input
                   type="text"
                   id="nome"
@@ -39,10 +41,10 @@ const ContactForm = () => {
                   value={nome}
                   onChange={(e) => setNome(e.target.value)}
                 />
-                <span className="input-message">Seu nome</span>
-              </div>
+               
+         
               <label htmlFor="email">Email</label>
-              <div className="input-container">
+            
                 <input
                   type="email"
                   id="email"
@@ -50,12 +52,10 @@ const ContactForm = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <span className="input-message">
-                  Digite seu endereço de email
-                </span>
-              </div>
+              
+           
               <label htmlFor="telefone">Telefone</label>
-              <div className="input-container">
+            
                 <input
                   type="tel"
                   id="telefone"
@@ -63,8 +63,8 @@ const ContactForm = () => {
                   value={telefone}
                   onChange={(e) => setTelefone(e.target.value)}
                 />
-                <span className="input-message">9999-9999</span>
-              </div>
+             
+             
               <label htmlFor="mensagem">Mensagem</label>
               <textarea
                 id="mensagem"
@@ -72,12 +72,17 @@ const ContactForm = () => {
                 value={mensagem}
                 onChange={(e) => setMensagem(e.target.value)}
               />
+               <Tilt
+        className="tilt"
+        options={{ max: 25 }}
+     >
               <button href="/">ENVIAR MENSAGEM</button>
+              </Tilt>
             </form>
-          </div>
+      
         </div>
-      </div>
-    </div>
+
+
   );
 };
 
