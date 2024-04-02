@@ -59,7 +59,7 @@ function OurSolutions() {
             </Tilt>
           </div>
 
-          <div className="section-img">
+          <div id="section-mockup"className="section-img">
             <img src={MockUp} />
           </div>
         </div>
@@ -68,7 +68,7 @@ function OurSolutions() {
         <Roll left>
 
         <div className="second-section">
-          <div  className="section-img">
+          <div className="left-img">
             <img src={Couple} />
           </div>
 

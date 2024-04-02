@@ -34,7 +34,7 @@
 .section-web-d {
   display: flex;
   flex-direction: row;
-
+  padding-top: 6rem;
   padding-left: 6rem;
   align-items: center;
   padding-bottom: 2rem;
@@ -241,13 +241,12 @@ margin-bottom: -80px;
     text-align: center;
     padding-right: 0rem;
     padding: 0px 10px 0px 10px;
-    margin-top: -17px;
   }
 
   .section-web-d {
     display: flex;
     flex-direction: column;
-
+    padding-top: 0rem;
     padding-left: 0rem;
     align-items: center;
     padding-bottom: 0rem;
@@ -277,7 +276,7 @@ margin-bottom: -80px;
   .section-right {
     max-width: 100%;
     height: auto;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
