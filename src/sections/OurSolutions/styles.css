@@ -28,7 +28,6 @@
   justify-content: space-between;
   margin-right: 1rem;
   padding-top: 6rem;
-
 }
 
 .section-web-d {
@@ -65,13 +64,11 @@
 }
 
 .section-one {
-
   display: flex;
   margin: 20px 0 0 80px;
 }
 
 .right-section {
-
   width: 100%;
   justify-content: flex-end;
   align-items: flex-end;
@@ -96,7 +93,6 @@
   text-align: start;
   padding-top: 2.5rem;
   padding-left: 40px;
-
 }
 
 .section-txt-title {
@@ -161,7 +157,6 @@ button {
 
 .section-mockup {
   margin-top: -43px;
-
 }
 
 .left-img {
@@ -186,21 +181,18 @@ button {
   padding-bottom: 1.5rem;
 }
 
-.link-to-form{
+.link-to-form {
   color: white;
 }
 
 @media (max-width: 732px) {
   .section {
-
     margin-top: 10vh;
   }
 
-  
-.main-title{
-
-margin-bottom: -80px;
-}
+  .main-title {
+    margin-bottom: -80px;
+  }
 
   .main-title h1 {
     font-size: 30px;
@@ -216,7 +208,6 @@ margin-bottom: -80px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
 
   .section-txt-title {
@@ -233,7 +224,6 @@ margin-bottom: -80px;
   }
 
   .section-txt {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -270,7 +260,6 @@ margin-bottom: -80px;
     align-items: center;
     margin-right: 0rem;
     padding-top: 0rem;
-
   }
 
   .section-right {
@@ -291,7 +280,6 @@ margin-bottom: -80px;
     align-items: center;
     text-align: center;
     margin-top: 50px;
-
   }
 
   .left-img img {
@@ -300,7 +288,5 @@ margin-bottom: -80px;
 
   .text-item-img {
     align-items: start;
-    
   }
-
 }

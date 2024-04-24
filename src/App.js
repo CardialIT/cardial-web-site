@@ -14,17 +14,14 @@ import "./global.css";
 function App() {
   return (
     <div className="container">
-      <ReactWhatsappButton
-        countryCode="41"
-        phoneNumber="96745640" 
-      />
+      <ReactWhatsappButton countryCode="41" phoneNumber="96745640" />
       <NavBar />
       <BannerPrimary />
       <OurProducts />
       <OurSolutions />
       <Form />
       {/* <OurTeam /> */}
-   
+
       <Footer />
     </div>
   );
