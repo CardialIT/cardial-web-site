@@ -1,29 +1,18 @@
-import React from "react";
-import NavBar from "./sections/NavBar/index";
-import BannerPrimary from "./sections/BannerPrimary/index";
-import OurProducts from "./sections/OurProducts/index";
-import OurSolutions from "./sections/OurSolutions/index";
-import OurTeam from "./sections/OurTeam/index";
-import Footer from "./sections/Footer/index";
-import Form from "./sections/Form/index";
-
-import ReactWhatsappButton from "react-whatsapp-button";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./global.css";
+import Home from "./pages/home";
+import TermsRuminar from "./pages/terms-ruminar";
 
 function App() {
   return (
-    <div className="container">
-      <ReactWhatsappButton countryCode="41" phoneNumber="96745640" />
-      <NavBar />
-      <BannerPrimary />
-      <OurProducts />
-      <OurSolutions />
-      <Form />
-      {/* <OurTeam /> */}
-
-      <Footer />
-    </div>
+    <Router>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/terms-ruminar" element={<TermsRuminar />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
