@@ -1,0 +1,732 @@
+.reset-senha-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.reset-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  margin-top: 80px;
+}
+
+.reset-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  padding: 3.5rem;
+  width: 100%;
+  max-width: 520px;
+  animation: fadeInUp 0.6s ease-out;
+  border: 1px solid #e2e8f0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reset-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.logo-header {
+  margin-bottom: 1rem;
+}
+
+.reset-header h1 {
+  color: #1e293b;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #BF3475 0%, #8a2be2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-name {
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.reset-subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Progresso dos passos */
+.progress-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+.step-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.step-indicator.active .step-number {
+  background: linear-gradient(135deg, #BF3475 0%, #8a2be2 100%);
+  color: white;
+  border-color: white;
+  box-shadow: 0 8px 24px rgba(191, 52, 117, 0.3);
+  transform: scale(1.1);
+}
+
+.step-label {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.step-indicator.active .step-label {
+  color: #BF3475;
+  font-weight: 700;
+}
+
+.step-connector {
+  width: 100px;
+  height: 4px;
+  background: #f1f5f9;
+  margin: 0 1rem;
+  position: relative;
+  top: -24px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.step-indicator.active ~ .step-connector {
+  background: linear-gradient(90deg, #BF3475 0%, #8a2be2 100%);
+}
+
+/* Mensagens */
+.message-box {
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  animation: slideIn 0.3s ease-out;
+  border-left: 4px solid;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.message-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.message-content {
+  flex: 1;
+}
+
+.message-box.success {
+  background: #f0fdf4;
+  color: #166534;
+  border-left-color: #22c55e;
+}
+
+.message-box.error {
+  background: #fef2f2;
+  color: #991b1b;
+  border-left-color: #ef4444;
+}
+
+.message-box.info {
+  background: #eff6ff;
+  color: #1e40af;
+  border-left-color: #3b82f6;
+}
+
+.email-note {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(34, 197, 94, 0.3);
+  font-size: 0.9rem;
+}
+
+/* Formulário */
+.reset-form {
+  margin-bottom: 2.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+}
+
+.form-group label {
+  display: block;
+  color: #334155;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.required {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  color: #1e293b;
+  font-family: inherit;
+}
+
+.input-with-icon input:focus {
+  outline: none;
+  border-color: #BF3475;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(191, 52, 117, 0.15);
+}
+
+.input-with-icon input:disabled {
+  background: #f1f5f9;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.input-with-icon input.masked-email {
+  color: #64748b;
+  font-style: italic;
+}
+
+.form-help {
+  display: block;
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Info do usuário */
+.user-info-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    border-color: #e2e8f0;
+  }
+  50% {
+    border-color: #BF3475;
+  }
+}
+
+.user-icon {
+  font-size: 2rem;
+  background: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-label {
+  display: block;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.user-email {
+  color: #1e293b;
+  font-size: 1.1rem;
+  word-break: break-all;
+}
+
+/* Força da senha */
+.password-strength {
+  margin: 1.75rem 0 2rem;
+  background: #f8fafc;
+  padding: 1.25rem;
+  border-radius: 12px;
+}
+
+.strength-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.strength-text {
+  font-weight: 700;
+}
+
+.strength-text.weak {
+  color: #ef4444;
+}
+
+.strength-text.medium {
+  color: #f59e0b;
+}
+
+.strength-text.strong {
+  color: #10b981;
+}
+
+.strength-bar {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.strength-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    #ef4444 0%, 
+    #ef4444 33%, 
+    #f59e0b 33%, 
+    #f59e0b 66%, 
+    #10b981 66%, 
+    #10b981 100%);
+  opacity: 0.2;
+}
+
+.strength-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.strength-bar.weak .strength-fill {
+  width: 33%;
+  background: #ef4444;
+}
+
+.strength-bar.medium .strength-fill {
+  width: 66%;
+  background: #f59e0b;
+}
+
+.strength-bar.strong .strength-fill {
+  width: 100%;
+  background: #10b981;
+}
+
+/* Botões */
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1.125rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: inherit;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #BF3475 0%, #8a2be2 100%);
+  color: white;
+  box-shadow: 0 6px 20px rgba(191, 52, 117, 0.3);
+}
+
+.primary-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(191, 52, 117, 0.4);
+}
+
+.primary-btn:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.secondary-btn {
+  background: #f1f5f9;
+  color: #475569;
+  border: 2px solid #e2e8f0;
+}
+
+.secondary-btn:hover:not(:disabled) {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+/* Spinner */
+.spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.secondary-btn .spinner {
+  border: 3px solid rgba(71, 85, 105, 0.3);
+  border-top-color: #475569;
+}
+
+/* Links */
+.reset-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem 0;
+  padding-top: 1.5rem;
+  border-top: 2px solid #f1f5f9;
+}
+
+.back-link, .help-link {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-link:hover, .help-link:hover {
+  color: #BF3475;
+  text-decoration: underline;
+}
+
+.link-icon {
+  font-size: 1.1rem;
+}
+
+/* Dicas de segurança */
+.security-tips {
+  margin-top: 2.5rem;
+  padding: 1.75rem;
+  background: #f8fafc;
+  border-radius: 16px;
+  border: 2px solid #e2e8f0;
+}
+
+.security-tips h3 {
+  color: #1e293b;
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+}
+
+.tip-icon {
+  font-size: 1.4rem;
+}
+
+.security-tips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.security-tips li {
+  color: #475569;
+  padding: 0.625rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.security-tips li:before {
+  content: "✓";
+  color: #10b981;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Info da API */
+.api-info {
+  margin-top: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.api-info small {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-family: 'Courier New', monospace;
+}
+
+.api-info code {
+  background: #f1f5f9;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .reset-main {
+    padding: 1rem;
+    margin-top: 70px;
+  }
+  
+  .reset-card {
+    padding: 2.5rem 2rem;
+  }
+  
+  .reset-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .progress-steps {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .step-connector {
+    width: 4px;
+    height: 40px;
+    margin: 0;
+  }
+  
+  .step-indicator {
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .step-number {
+    margin-bottom: 0;
+  }
+  
+  .reset-links {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .form-buttons {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reset-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .reset-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .reset-subtitle {
+    font-size: 1rem;
+  }
+  
+  .submit-btn {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .security-tips {
+    padding: 1.25rem;
+  }
+  
+  .user-info-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+  }
+  
+  .user-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .reset-senha-container {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+  
+  .reset-card {
+    background: #1e293b;
+    border-color: #334155;
+  }
+  
+  .reset-header h1,
+  .reset-subtitle,
+  .form-group label,
+  .user-email,
+  .security-tips h3,
+  .api-info code {
+    color: #f1f5f9;
+  }
+  
+  .app-name,
+  .form-help,
+  .user-label,
+  .strength-header,
+  .back-link,
+  .help-link {
+    color: #cbd5e1;
+  }
+  
+  .input-with-icon input {
+    background: #334155;
+    border-color: #475569;
+    color: #f1f5f9;
+  }
+  
+  .input-with-icon input:focus {
+    background: #475569;
+  }
+  
+  .security-tips,
+  .user-info-card,
+  .password-strength {
+    background: #334155;
+    border-color: #475569;
+  }
+  
+  .security-tips li {
+    color: #cbd5e1;
+  }
+  
+  .secondary-btn {
+    background: #475569;
+    color: #f1f5f9;
+    border-color: #64748b;
+  }
+  
+  .secondary-btn:hover:not(:disabled) {
+    background: #64748b;
+  }
+}

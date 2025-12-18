@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./global.css";
 import Home from "./pages/home";
 import TermsRuminar from "./pages/terms-ruminar";
+import ResetSenha from "./pages/reset-senha";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/terms-ruminar" element={<TermsRuminar />} />
+           <Route path="/reset-senha" element={<ResetSenha />} />
         </Routes>
       </div>
     </Router>
