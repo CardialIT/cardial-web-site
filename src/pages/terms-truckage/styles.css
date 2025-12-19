@@ -1,0 +1,411 @@
+/* styles.css - Estilos para o Truckage Cardial */
+.terms-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.terms-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.terms-header h1 {
+  color: #101828;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.last-update {
+  color: #667085;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.terms-content {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+}
+
+.terms-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.terms-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.terms-section h2 {
+  color: #2C3E50; /* Azul escuro para transporte/logística */
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.terms-section p {
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+/* Grid de Informações */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.info-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border-left: 4px solid #3498DB; /* Azul para transporte */
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+  color: #101828;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card li {
+  color: #667085;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.info-card li:before {
+  content: "•";
+  color: #3498DB;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.info-card li strong {
+  color: #2C3E50;
+}
+
+/* Caixa de Aviso */
+.notice-box {
+  background: linear-gradient(135deg, #3498DB 0%, #2C3E50 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.notice-box h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.notice-box p {
+  color: white;
+  margin-bottom: 0;
+}
+
+/* Provedores */
+.providers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.provider {
+  background: #f0f7ff;
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #d1e9ff;
+  transition: transform 0.2s ease;
+}
+
+.provider:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.1);
+}
+
+.provider h4 {
+  color: #2C3E50;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.provider p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Caixa de Divulgação */
+.disclosure-box {
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.disclosure-box h3 {
+  color: #c53030;
+  margin-bottom: 1rem;
+}
+
+/* Grid de Direitos */
+.rights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.right-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.right-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.right-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #3498DB;
+}
+
+.right-card h3 {
+  color: #101828;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.right-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.right-card li {
+  color: #667085;
+  padding: 0.3rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.right-card li:before {
+  content: "→";
+  color: #3498DB;
+  position: absolute;
+  left: 0;
+}
+
+/* Caixa de Conformidade */
+.compliance-box {
+  background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.compliance-box h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.compliance-box p {
+  color: #e2e8f0;
+  margin-bottom: 0;
+}
+
+/* Informações de Segurança */
+.security-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.security-item {
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #27ae60;
+}
+
+.security-item h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.security-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.security-item li {
+  color: #667085;
+  padding: 0.3rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.security-item li:before {
+  content: "✓";
+  color: #27ae60;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Seção de Consentimento */
+.consent-section {
+  background: linear-gradient(135deg, #f6f8ff 0%, #f0f4ff 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.consent-section h2 {
+  color: #2C3E50;
+}
+
+/* Seção de Contato */
+.contact-section {
+  background: #2C3E50;
+  color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+}
+
+.contact-section h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-info p {
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.email-link {
+  color: #3498DB;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: #5dade2;
+  text-decoration: underline;
+}
+
+.effective-date {
+  background: rgba(52, 152, 219, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1.5rem !important;
+  text-align: center;
+}
+
+.contact-note {
+  font-size: 0.95rem !important;
+  color: #bdc3c7 !important;
+  font-style: italic;
+  margin-top: 1.5rem !important;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .terms-container {
+    padding: 1rem;
+  }
+  
+  .terms-header h1 {
+    font-size: 2rem;
+  }
+  
+  .terms-content {
+    padding: 1.5rem;
+  }
+  
+  .info-grid,
+  .rights-grid,
+  .security-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .terms-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-section {
+    padding: 1.5rem;
+  }
+  
+  .providers {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .terms-content {
+    padding: 1rem;
+  }
+  
+  .terms-section {
+    padding: 1.5rem;
+  }
+  
+  .info-card,
+  .right-card,
+  .security-item {
+    padding: 1rem;
+  }
+}

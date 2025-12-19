@@ -3,6 +3,7 @@ import "./global.css";
 import Home from "./pages/home";
 import TermsRuminar from "./pages/terms-ruminar";
 import ResetSenha from "./pages/reset-senha";
+import PrivacyTruckage from "./pages/terms-truckage";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/terms-ruminar" element={<TermsRuminar />} />
+            <Route path="/privacy-truckage" element={<PrivacyTruckage />} />
            <Route path="/reset-senha" element={<ResetSenha />} />
         </Routes>
       </div>
