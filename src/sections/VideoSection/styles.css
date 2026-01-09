@@ -1,0 +1,44 @@
+/* src/sections/VideoSection/styles.css */
+.video-section {
+  padding: 80px 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-content {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  gap: 40px;
+  align-items: center;
+}
+
+.video-text h2 {
+  font-size: 36px;
+  color: #3A414F;
+  margin-bottom: 20px;
+}
+
+.video-text p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.video-embed {
+  flex: 1;
+  max-width: 560px;
+}
+
+@media (max-width: 768px) {
+  .video-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .video-text h2 {
+    font-size: 28px;
+  }
+}
