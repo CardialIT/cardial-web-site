@@ -4,7 +4,7 @@ import { FiSend, FiArrowRight, FiChevronDown } from "react-icons/fi";
 import { SiNextdotjs, SiReact, SiNodedotjs } from "react-icons/si";
 import TypeAnimation from "react-type-animation";
 import Tilt from "react-tilt";
-import bannerPrimaryImg from "../../assets/banner-primary.png";
+import bannerPrimaryImg from "../../assets/bannerPrimary.png";
 
 function Highlights() {
   const scrollToContact = () => {
