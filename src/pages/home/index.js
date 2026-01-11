@@ -18,7 +18,7 @@ function Home() {
       <BannerPrimary />
       <OurServices />
       <WhyChooseUs />
-      <VideoSection />
+      {/* <VideoSection /> */}
       <Testimonials />
       <Footer />
     </div>

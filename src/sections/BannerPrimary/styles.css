@@ -1,14 +1,14 @@
 :root {
-  --color-primary: #2563eb;
-  --color-primary-dark: #1d4ed8;
+  --color-primary: #cf4675;
+  --color-primary-dark: #b93173;
   --color-title: #1e293b;
   --color-paragraph: #64748b;
   --color-background: #f8fafc;
-  --color-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --color-gradient: linear-gradient(135deg, #f590ad 0%, #b93173 100%);
 }
 
 .page-container {
-  padding-top: 5vw;
+  padding-top: 8vw;
   display: flex;
   flex-direction: row;
   min-height: 90vh;
@@ -325,17 +325,20 @@
     flex-direction: column;
     padding-top: 2rem;
     text-align: center;
+    
   }
   
   .side-left {
     width: 100%;
     padding: 2rem;
     align-items: center;
+    order: 2; /* Muda a ordem para aparecer depois da imagem */
   }
   
   .side-right {
     width: 100%;
     padding: 2rem;
+    order: 1; /* Muda a ordem para aparecer primeiro */
   }
   
   .banner-image {
@@ -359,8 +362,19 @@
 }
 
 @media (max-width: 732px) { 
+  /* REMOVA ou COMENTE esta linha que esconde a imagem:
   .side-right {
     display: none;
+  }
+  */
+  
+  /* Em vez disso, ajuste o layout para mobile: */
+  .page-container {
+    flex-direction: column;
+    padding-top: 1.5rem;
+    text-align: center;
+    min-height: auto;
+     padding-top: 30vw;
   }
   
   .side-left {
@@ -371,6 +385,32 @@
     align-items: center;
     padding: 1rem;
     height: auto;
+    order: 2;
+  }
+  
+  .side-right {
+    width: 100%;
+    padding: 1rem;
+    order: 1;
+    display: flex; /* Garante que seja exibido */
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Altura fixa para mobile */
+  }
+  
+  .image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-image {
+    width: 80%;
+    max-width: 300px;
+    min-width: 250px;
+    animation: float-mobile 4s ease-in-out infinite;
   }
   
   .container-title-animate {
@@ -386,23 +426,26 @@
     display: block;
     font-weight: 700;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem; /* Reduzido um pouco */
     color: var(--color-title);
     margin-bottom: 1rem;
     line-height: 1.3;
+    padding: 0 1rem;
   }
   
   .description {
     font-size: 1rem;
     text-align: center;
     margin-bottom: 2rem;
+    padding: 0 1rem;
   }
   
   .stats-container {
     flex-direction: column;
     gap: 1.5rem;
     padding: 1rem;
-    width: 100%;
+    width: 90%;
+    max-width: 400px;
   }
   
   .stat-divider {
@@ -418,4 +461,73 @@
   .scroll-indicator {
     display: none;
   }
+  
+  /* Ajuste dos elementos flutuantes para mobile */
+  .floating-element {
+    display: none; /* Opcional: esconder em mobile para melhor performance */
+  }
+  
+  /* Ajuste do botão CTA para mobile */
+  .cta-container {
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button-primary {
+    width: 90%;
+    max-width: 300px;
+    height: 55px;
+    font-size: 0.95rem;
+  }
 }
+
+/* Animação específica para mobile */
+@keyframes float-mobile {
+  0%, 100% {
+    transform: translateY(0px) scale(0.95);
+  }
+  50% {
+    transform: translateY(-15px) scale(0.97);
+  }
+}
+
+/* Opcional: Para telas muito pequenas (menos de 400px) */
+@media (max-width: 480px) {
+  .side-right {
+    height: 250px;
+  }
+  
+  .banner-image {
+    width: 85%;
+    max-width: 280px;
+    min-width: 220px;
+  }
+  
+  .title-banner {
+    font-size: 1.6rem;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .stat-number {
+    font-size: 1.7rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+  }
+}
+
+/* Para garantir que a imagem sempre apareça em dispositivos com hover */
+@media (hover: hover) and (pointer: fine) {
+  .banner-image:hover {
+    transform: translateY(-5px) scale(1.02);
+    transition: transform 0.3s ease;
+  }
+}
+

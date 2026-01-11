@@ -35,8 +35,8 @@ function Testimonials() {
     {
       id: 1,
       name: "Laurence",
-      company: "Fazenda Leite Premium",
-      role: "Produtor Rural",
+      company: "Ruminar Leite",
+      role: "Veterinário",
       project: "App Ruminar Leite",
       category: "mobile",
       quote: "O Ruminar Leite revolucionou nossa gestão. Antes tínhamos anotações em cadernos, hoje temos controle em tempo real da produção, saúde do rebanho e custos. Aumentamos 30% na produtividade!",
@@ -137,7 +137,7 @@ function Testimonials() {
       linkLabel: "Ver demonstração",
       icon: <FaLeaf />
     },
-    {
+    { 
       id: 8,
       name: "Roberta",
       company: "Moda Express",

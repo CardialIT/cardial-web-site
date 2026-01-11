@@ -57,7 +57,7 @@
 }
 
 .social-icon:hover {
-  background: #2563eb;
+  background: #b93173;
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
 }
@@ -146,7 +146,7 @@
 
 .contact-icon {
   font-size: 1.25rem;
-  color: #60a5fa;
+  color: #b93173;
 }
 
 /* Middle Section */
@@ -228,7 +228,7 @@
 
 .location-icon {
   font-size: 1rem;
-  color: #60a5fa;
+  color: #b93173;
 }
 
 .footer-credits p {

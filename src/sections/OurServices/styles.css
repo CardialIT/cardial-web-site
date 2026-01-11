@@ -1,12 +1,12 @@
 :root {
-  --color-primary: #2563eb;
+  --color-primary: #cf4675;;
   --color-secondary: #8b5cf6;
   --color-accent: #10b981;
   --color-text: #1e293b;
   --color-text-light: #64748b;
   --color-background: #ffffff;
   --color-surface: #f8fafc;
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-primary: linear-gradient(135deg, #f590ad 0%, #b93173 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -192,7 +192,12 @@
   align-items: center;
   gap: 8px;
   font-size: 0.875rem;
-  color: var(--color-text-light);
+  color: var(--color-text);
+}
+
+.service-features span {
+
+  color: var(--color-text);
 }
 
 .feature-icon {

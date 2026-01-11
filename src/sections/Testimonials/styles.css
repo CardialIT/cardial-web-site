@@ -1,7 +1,7 @@
 /* Variáveis específicas para este componente */
 .testimonials-section {
-  --ts-primary: #2563eb;
-  --ts-secondary: #8b5cf6;
+  --ts-primary: #b93173;
+  --ts-secondary: #d6587c;
   --ts-accent: #10b981;
   --ts-warning: #f59e0b;
   --ts-danger: #ec4899;
@@ -9,7 +9,7 @@
   --ts-text-light: #64748b;
   --ts-background: #ffffff;
   --ts-surface: #f8fafc;
-  --ts-gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --ts-gradient-primary: linear-gradient(135deg, #e05777 0%, #b93173 100%);
   --ts-shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --ts-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --ts-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);

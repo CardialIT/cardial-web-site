@@ -105,7 +105,7 @@
 }
 
 .nav-link:hover {
-  color: #2563eb;
+  color: #b93173;
 }
 
 .nav-link::after {
@@ -115,7 +115,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #2563eb;
+  background: #b93173;
   transition: width 0.3s ease;
 }
 
@@ -192,7 +192,7 @@
 .cta-button {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f590ad 0%, #b93173 100%);
   color: white;
   border: none;
   border-radius: 12px;
@@ -209,7 +209,7 @@
 }
 
 .cta-button:hover {
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 10px 30px rgba(234, 102, 223, 0.4);
   transform: translateY(-2px);
 }
 

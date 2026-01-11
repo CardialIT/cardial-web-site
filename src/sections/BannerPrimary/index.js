@@ -8,7 +8,7 @@ import bannerPrimaryImg from "../../assets/bannerPrimary.png";
 
 function Highlights() {
   const scrollToContact = () => {
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -32,25 +32,32 @@ function Highlights() {
               "Soluções digitais sob medida!",
               3000,
               "Inovação em desenvolvimento de software!",
-              3000
+              3000,
             ]}
             wrapper="h1"
             repeat={Infinity}
             className="animated-text"
           />
-          <h1 className="title-banner">Potencializando seu negócio com tecnologia!</h1>
+          <h1 className="title-banner">
+            Potencializando seu negócio com tecnologia!
+          </h1>
         </div>
 
         <p className="description">
-          Somos especialistas em desenvolvimento de software com foco em 
-          <span className="highlight-text"> soluções ágeis, eficazes</span> e 
-          <span className="highlight-text"> resultados mensuráveis</span>. 
-          Transformamos suas ideias em realidade digital.
+          Oferecemos desenvolvimento de software com
+          <span className="highlight-text"> suporte paciente</span> e
+          <span className="highlight-text"> tecnologia descomplicada</span> ,
+          focada em <span className="highlight-text">entregas claras</span> e{" "}
+          <span className="highlight-text">
+            {" "}
+            resultados que cabem no seu bolso.
+          </span>{" "}
+          . Transformamos suas ideias em realidade digital, guiando cada passo.
         </p>
 
         <div className="stats-container">
           <div className="stat-item">
-            <span className="stat-number">+50</span>
+            <span className="stat-number">+10</span>
             <span className="stat-label">Projetos Entregues</span>
           </div>
           <div className="stat-divider"></div>
@@ -60,8 +67,8 @@ function Highlights() {
           </div>
           <div className="stat-divider"></div>
           <div className="stat-item">
-            <span className="stat-number">24/7</span>
-            <span className="stat-label">Suporte</span>
+            <span className="stat-number">4</span>
+            <span className="stat-label">Estados do Brasil</span>
           </div>
         </div>
 
@@ -73,16 +80,11 @@ function Highlights() {
           >
             <button className="button-primary">
               <a href="https://api.whatsapp.com/send?phone=5541996745640&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)">
-                Fale Conosco 
+                Fale Conosco
                 <FiSend className="icon-send" />
               </a>
             </button>
           </Tilt>
-
-          <button className="button-secondary" onClick={scrollToContact}>
-            Saiba Mais
-            <FiArrowRight className="icon-arrow" />
-          </button>
         </div>
 
         <div className="scroll-indicator">
@@ -96,7 +98,11 @@ function Highlights() {
           <div className="floating-element elem-1"></div>
           <div className="floating-element elem-2"></div>
           <div className="floating-element elem-3"></div>
-          <img src={bannerPrimaryImg} alt="Desenvolvimento de Software" className="banner-image" />
+          <img
+            src={bannerPrimaryImg}
+            alt="Desenvolvimento de Software"
+            className="banner-image"
+          />
         </div>
       </div>
     </div>

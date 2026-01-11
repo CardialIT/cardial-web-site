@@ -24,19 +24,20 @@ export default function NavBar() {
 
   const navItems = [
     { label: "Início", href: "#home" },
-    { 
-      label: "Serviços", 
-      href: "#servicos",
-      dropdown: [
-        { label: "Desenvolvimento Web", href: "#web" },
-        { label: "Apps Mobile", href: "#mobile" },
-        { label: "Sistemas SAAS", href: "#saas" },
-        { label: "Consultoria Tech", href: "#consultoria" }
-      ]
-    },
-    { label: "Sobre Nós", href: "#sobre" },
-    { label: "Portfólio", href: "#portfolio" },
-    { label: "Depoimentos", href: "#depoimentos" }
+    // { 
+    //   label: "Serviços", 
+    //   href: "#servicos",
+    //   dropdown: [
+    //     { label: "Desenvolvimento Web", href: "#web" },
+    //     { label: "Apps Mobile", href: "#mobile" },
+    //     { label: "Sistemas SAAS", href: "#saas" },
+    //     { label: "Consultoria Tech", href: "#consultoria" }
+    //   ]
+    // },
+    
+    { label: "Portfólio", href: "/portfolio" },
+    { label: "Depoimentos", href: "/testimonials" },
+    { label: "Sobre Nós", href: "/about-us" },
   ];
 
   return (
@@ -46,10 +47,7 @@ export default function NavBar() {
         <div className="logo-section">
           <a href="/" className="logo-link">
             <img src={Logo} className="logo-img" alt="Cardial I.T." />
-            <div className="logo-text">
-              <span className="logo-name">Cardial</span>
-              <span className="logo-subtitle">I.T. Solutions</span>
-            </div>
+           
           </a>
         </div>
 

@@ -16,55 +16,26 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      quote: "A Cardial não apenas desenvolveu nosso sistema, mas revolucionou toda nossa operação. Aumentamos 150% em eficiência!",
-      author: "Carlos Mendes",
-      role: "CEO, TechGrowth Solutions",
+    quote: "Antes tínhamos anotações em planilhas, hoje temos controle em tempo real da produção e custos.",
+      author: "Laurence Brum",
+     role: "Veterinário",
       rating: 5,
-      avatar: "CM",
-      company: "Fintech",
-      color: "#2563eb",
-      features: ["SaaS Personalizado", "Integração Completa", "Suporte 24/7"]
+      avatar: "LB",
+      company: "Ruminar",
+      color: "#b93173",
+      features: ["App Mobile"]
     },
     {
-      quote: "O aplicativo desenvolvido superou todas as expectativas. Usabilidade impecável e performance excepcional. ROI incrível!",
-      author: "Ana Silva",
-      role: "Diretora de Inovação, RetailPro",
+      quote: "A solução desenvolvida pela Cardial melhorou drasticamente nosso acompanhamento terapêutico.",
+      author: "Marcus Vilhena",
+      role: "Marketing Digital",
       rating: 5,
-      avatar: "AS",
-      company: "Varejo",
-      color: "#10b981",
-      features: ["App Mobile Nativo", "UX/UI Premium", "Escalabilidade"]
+      avatar: "MV",
+      company: "Clínica Cleuza Canan",
+      color: "#b93173",
+      features: ["App Mobile"]
     },
-    {
-      quote: "A automação implementada reduziu 80% do trabalho manual. Equipe extremamente profissional e resultados rápidos.",
-      author: "Roberto Santos",
-      role: "CTO, LogisticsTech",
-      rating: 5,
-      avatar: "RS",
-      company: "Logística",
-      color: "#8b5cf6",
-      features: ["Automação RPA", "API Integrada", "Dashboard em Tempo Real"]
-    },
-    {
-      quote: "Transformação digital completa com consultoria especializada. Parceiros estratégicos no nosso crescimento.",
-      author: "Mariana Costa",
-      role: "VP de Operações, HealthPlus",
-      rating: 5,
-      avatar: "MC",
-      company: "Saúde",
-      color: "#f59e0b",
-      features: ["Sistema Customizado", "Migração Cloud", "Segurança LGPD"]
-    },
-    {
-      quote: "Site responsivo que aumentou conversões em 300%. SEO otimizado que nos posicionou no topo do Google.",
-      author: "Pedro Almeida",
-      role: "Fundador, EduTech Brasil",
-      rating: 5,
-      avatar: "PA",
-      company: "Educação",
-      color: "#ec4899",
-      features: ["Site Performático", "SEO Avançado", "Analytics Integrado"]
-    }
+   
   ];
 
   useEffect(() => {
@@ -126,10 +97,9 @@ export default function Testimonials() {
   };
 
   const stats = [
-    { icon: <FiTrendingUp />, value: "150%", label: "Aumento em Eficiência", color: "#10b981" },
-    { icon: <FiCheckCircle />, value: "300%", label: "Mais Conversões", color: "#2563eb" },
-    { icon: <IoMdBusiness />, value: "50+", label: "Projetos Entregues", color: "#8b5cf6" },
-    { icon: <FiUser />, value: "98%", label: "Satisfação", color: "#f59e0b" }
+    { icon: <FiTrendingUp />, value: "150%", label: "Aumento em Eficiência", color: "#b93173" },
+    { icon: <IoMdBusiness />, value: "10+", label: "Projetos Entregues", color: "#b93173" },
+    { icon: <FiUser />, value: "98%", label: "Satisfação", color: "#b93173" }
   ];
 
   const renderStars = (rating) => {
@@ -170,30 +140,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Stats Bar */}
-        <div className="testimonials-stats">
-          {stats.map((stat, index) => (
-            <div 
-              key={index}
-              className="stat-item"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-                transition: `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`,
-                borderLeftColor: stat.color
-              }}
-            >
-              <div className="stat-icon" style={{ color: stat.color }}>
-                {stat.icon}
-              </div>
-              <div className="stat-content">
-                <div className="stat-value">{stat.value}</div>
-                <div className="stat-label">{stat.label}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-
+       
         {/* Main Testimonial */}
         <div className="testimonial-main">
           <div className="testimonial-controls">
@@ -270,31 +217,8 @@ export default function Testimonials() {
             ))}
           </div>
 
-          {/* Progress Bar */}
-          <div className="testimonial-progress">
-            <div 
-              className="progress-bar"
-              style={{ 
-                width: `${((activeIndex + 1) / testimonials.length) * 100}%`,
-                backgroundColor: testimonials[activeIndex].color
-              }}
-            ></div>
-          </div>
 
-          {/* Dots Navigation */}
-          <div className="testimonial-dots">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                className={`dot ${index === activeIndex ? 'active' : ''}`}
-                onClick={() => goToTestimonial(index)}
-                style={{ 
-                  backgroundColor: index === activeIndex ? testimonials[activeIndex].color : '#e5e7eb'
-                }}
-                aria-label={`Ir para depoimento ${index + 1}`}
-              />
-            ))}
-          </div>
+   
         </div>
 
         {/* CTA Section */}
@@ -312,14 +236,14 @@ export default function Testimonials() {
             
             <div className="cta-buttons">
               <a 
-                href="https://api.whatsapp.com/send?phone=5541996745640&text=Ol%C3%A1!%20gostaria%20de%20ver%20mais%20depoimentos%20e%20saber%20mais"
+                href="https://api.whatsapp.com/send?phone=5555999293516&text=Ol%C3%A1!%20gostaria%20de%20ver%20mais%20depoimentos%20e%20saber%20mais"
                 className="cta-button primary"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Falar com Especialista
               </a>
-              <a href="#portfolio" className="cta-button secondary">
+              <a href="/testimonials" className="cta-button secondary">
                 Ver Cases Completos
               </a>
             </div>

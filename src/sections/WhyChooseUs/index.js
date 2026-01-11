@@ -1,12 +1,27 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./styles.css";
-import { 
-  FaUsers, FaDollarSign, FaLaptop, FaHandshake, 
-  FaRocket, FaShieldAlt, FaCheckCircle, FaStar, 
-  FaTrophy, FaInfinity
+import {
+  FaUsers,
+  FaDollarSign,
+  FaLaptop,
+  FaHandshake,
+  FaRocket,
+  FaShieldAlt,
+  FaCheckCircle,
+  FaStar,
+  FaTrophy,
+  FaInfinity,
 } from "react-icons/fa";
-import { FiTarget, FiClock, FiGlobe, FiTrendingUp, FiArrowRight } from "react-icons/fi";
+import {
+  FiTarget,
+  FiClock,
+  FiGlobe,
+  FiTrendingUp,
+  FiArrowRight,
+} from "react-icons/fi";
+import { PiBirdFill } from "react-icons/pi";
 import { IoStatsChart, IoCodeSlash } from "react-icons/io5";
+import Iago from "../../assets/iago.png";
 
 export default function WhyChooseUs() {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,7 +32,7 @@ export default function WhyChooseUs() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
           }
@@ -39,8 +54,8 @@ export default function WhyChooseUs() {
       cardRefs.current.forEach((card, index) => {
         if (card) {
           setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
           }, index * 100);
         }
       });
@@ -49,8 +64,8 @@ export default function WhyChooseUs() {
       statRefs.current.forEach((stat, index) => {
         if (stat) {
           setTimeout(() => {
-            stat.style.opacity = '1';
-            stat.style.transform = 'scale(1)';
+            stat.style.opacity = "1";
+            stat.style.transform = "scale(1)";
           }, index * 150);
         }
       });
@@ -60,73 +75,123 @@ export default function WhyChooseUs() {
   const reasons = [
     {
       icon: <FaUsers />,
-      title: "Atendimento Humanizado",
-      description: "Suporte personalizado com comunicação clara e empatia, sem chatbots ou respostas automatizadas.",
-      features: ["Consultor dedicado", "Suporte 24/7 humano", "Feedback constante"],
-      stat: "98%",
-      statLabel: "Satisfação no atendimento",
-      color: "#2563eb"
+      title: "Atendimento que Te Entende",
+      description:
+        "Suporte humano, paciente e focado na sua experiência - ideal para quem está entrando no digital agora.",
+      features: [
+        "Explicamos passo a passo",
+        "Sem linguagem técnica complicada",
+        "Paciência para suas dúvidas",
+      ],
+      stat: "100%",
+      statLabel: "Focado na sua experiência",
+      color: "#b93173",
     },
     {
       icon: <FaDollarSign />,
-      title: "Valor Justo & Transparente",
-      description: "Tecnologia de ponta com preços abaixo do mercado e total transparência nos investimentos.",
-      features: ["Sem custos ocultos", "Flexibilidade financeira", "ROI garantido"],
+      title: "Preço que Cabe no Bolso",
+      description:
+        "Tecnologia de alto nível sem assustar no orçamento. Cabe no seu bolso e entrega resultado.",
+      features: [
+        "Preço abaixo do mercado",
+        "Custo-benefício transparente",
+        "Investimento justo",
+      ],
       stat: "40%",
-      statLabel: "Mais econômico",
-      color: "#10b981"
+      statLabel: "Mais econômico que concorrência",
+      color: "#b93173",
     },
     {
       icon: <FaLaptop />,
-      title: "Tecnologia de Ponta",
-      description: "Stack tecnológico atualizado com soluções completas, escaláveis e de alta performance.",
-      features: ["Tecnologias modernas", "Arquitetura escalável", "Performance otimizada"],
-      stat: "15+",
-      statLabel: "Tecnologias dominadas",
-      color: "#8b5cf6"
+      title: "Tecnologia Sem Complicação",
+      description:
+        "Falamos sua língua, guiamos você a cada passo, mesmo que esteja começando agora no digital.",
+      features: [
+        "Tecnologia acessível",
+        "Guiamos cada etapa",
+        "Adaptamos ao seu nível",
+      ],
+      stat: "0%",
+      statLabel: "Complicação técnica",
+      color: "#b93173",
     },
     {
       icon: <FaHandshake />,
-      title: "Parceria Real",
-      description: "Não somos apenas prestadores, somos parceiros no crescimento do seu negócio.",
-      features: ["Alinhamento estratégico", "Metas compartilhadas", "Crescimento conjunto"],
-      stat: "95%",
-      statLabel: "Clientes recorrentes",
-      color: "#f59e0b"
+      title: "Transparência Total",
+      description:
+        "Você sabe exatamente o que está sendo feito, quanto custa e quanto será entregue - sem surpresas.",
+      features: [
+        "Orçamento detalhado",
+        "Cronograma claro",
+        "Entregas previsíveis",
+      ],
+      stat: "100%",
+      statLabel: "Sem surpresas no orçamento",
+      color: "#b93173",
     },
     {
       icon: <FaRocket />,
-      title: "Entrega Ágil",
-      description: "Metodologias ágeis que garantem entregas rápidas sem comprometer a qualidade.",
-      features: ["Metodologia Scrum", "Sprints quinzenais", "MVP em 30 dias"],
+      title: "Resultados Rápidos",
+      description:
+        "Entregas ágeis e mensuráveis que mostram o retorno do seu investimento desde o início.",
+      features: ["MVP em semanas", "Métricas claras", "Resultado visível"],
       stat: "2x",
-      statLabel: "Mais rápido",
-      color: "#ec4899"
+      statLabel: "Mais rápido que o convencional",
+      color: "#b93173",
     },
     {
       icon: <FaShieldAlt />,
-      title: "Segurança Garantida",
-      description: "Protocolos de segurança robustos para proteger seus dados e aplicações.",
-      features: ["SSL/HTTPS", "Backups automáticos", "Conformidade LGPD"],
-      stat: "100%",
-      statLabel: "Segurança garantida",
-      color: "#3b82f6"
-    }
+      title: "Confiança Garantida",
+      description:
+        "Parceria baseada em confiança mútua, com qualidade assegurada e suporte constante.",
+      features: [
+        "Garantia no trabalho",
+        "Suporte contínuo",
+        "Parceria duradoura",
+      ],
+      stat: "95%",
+      statLabel: "Clientes que indicam",
+      color: "#b93173",
+    },
   ];
 
   const stats = [
-    { icon: <FaTrophy />, value: 150, suffix: "+", label: "Projetos Entregues", color: "#f59e0b" },
-    { icon: <FaStar />, value: 98, suffix: "%", label: "Satisfação do Cliente", color: "#8b5cf6" },
-    { icon: <FiClock />, value: 24, suffix: "/7", label: "Suporte Disponível", color: "#10b981" },
-    { icon: <FaInfinity />, value: 99.9, suffix: "%", label: "Uptime Garantido", color: "#ec4899" }
+    {
+      icon: <FaTrophy />,
+      value: 10,
+      suffix: "+",
+      label: "Projetos Entregues com Sucesso",
+      color: "#cf4675",
+    },
+    {
+      icon: <FaStar />,
+      value: 98,
+      suffix: "%",
+      label: "Satisfação do Cliente",
+      color: "#cf4675",
+    },
+    {
+      icon: <FiClock />,
+      value: 12,
+      suffix: "/5",
+      label: "Suporte Humano Disponível",
+      color: "#cf4675",
+    },
+    {
+      icon: <PiBirdFill />,
+      value: 4,
+      suffix: "",
+      label: "Estados do Brasil usam um software da Cardial",
+      color: "#cf4675",
+    },
   ];
 
   const principles = [
-    { icon: <FiTarget />, text: "Foco em Resultados" },
-    { icon: <IoStatsChart />, text: "Métricas Mensuráveis" },
-    { icon: <IoCodeSlash />, text: "Código de Qualidade" },
-    { icon: <FiGlobe />, text: "Visão Global" },
-    { icon: <FiTrendingUp />, text: "Crescimento Sustentável" }
+    { icon: <FiTarget />, text: "Foco na Sua Experiência" },
+    { icon: <IoStatsChart />, text: "Preços Transparentes" },
+    { icon: <IoCodeSlash />, text: "Tecnologia Simples" },
+    { icon: <FiGlobe />, text: "Para Iniciantes" },
+    { icon: <FiTrendingUp />, text: "Crescimento Sem Complicação" },
   ];
 
   // Função para animar contagem
@@ -173,37 +238,41 @@ export default function WhyChooseUs() {
 
       <div className="container">
         {/* Header Section */}
-        <div 
+        <div
           className="section-header"
-          style={{ 
+          style={{
             opacity: isVisible ? 1 : 0,
-            transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-            transition: 'opacity 0.6s ease, transform 0.6s ease'
+            transform: isVisible ? "translateY(0)" : "translateY(30px)",
+            transition: "opacity 0.6s ease, transform 0.6s ease",
           }}
         >
-          <span className="section-subtitle">POR QUE NÓS</span>
+          <span className="section-subtitle">POR QUE ESCOLHER A GENTE</span>
           <h2 className="section-title">
-            Não Somos Apenas uma Empresa, Somos Seu 
-            <span className="gradient-text"> Parceiro Tecnológico</span>
+            Para Quem Busca
+            <span className="gradient-text"> Tecnologia sem Mistério</span> e
+            <span className="gradient-text"> Resultado sem Surpresa</span>
           </h2>
           <p className="section-description">
-            Combinamos expertise técnica com paixão por resultados para entregar 
-            não apenas código, mas soluções que transformam negócios.
+            Combinamos suporte humanizado com tecnologia acessível para sua
+            transformação digital, principalmente se você for um iniciante -
+            sempre com transparência total e preço justo.
           </p>
         </div>
 
         {/* Stats Bar */}
         <div className="stats-bar">
           {stats.map((stat, index) => (
-            <div 
+            <div
               key={index}
-              ref={el => statRefs.current[index] = el}
+              ref={(el) => (statRefs.current[index] = el)}
               className="stat-item"
-              style={{ 
+              style={{
                 borderLeftColor: stat.color,
                 opacity: 0,
-                transform: 'scale(0.8)',
-                transition: `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`
+                transform: "scale(0.8)",
+                transition: `opacity 0.5s ease ${
+                  index * 0.1
+                }s, transform 0.5s ease ${index * 0.1}s`,
               }}
             >
               <div className="stat-icon" style={{ color: stat.color }}>
@@ -212,8 +281,8 @@ export default function WhyChooseUs() {
               <div className="stat-content">
                 <div className="stat-value">
                   {isVisible ? (
-                    <AnimatedCounter 
-                      end={stat.value} 
+                    <AnimatedCounter
+                      end={stat.value}
                       suffix={stat.suffix}
                       decimals={stat.value === 99.9 ? 1 : 0}
                     />
@@ -232,23 +301,31 @@ export default function WhyChooseUs() {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              ref={el => cardRefs.current[index] = el}
+              ref={(el) => (cardRefs.current[index] = el)}
               className="reason-card"
-              style={{ 
-                '--card-color': reason.color,
-                '--card-bg': `${reason.color}15`,
+              style={{
+                "--card-color": reason.color,
+                "--card-bg": `${reason.color}15`,
                 opacity: 0,
-                transform: 'translateY(50px)',
-                transition: `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`
+                transform: "translateY(50px)",
+                transition: `opacity 0.6s ease ${
+                  index * 0.1
+                }s, transform 0.6s ease ${index * 0.1}s`,
               }}
             >
               {/* Card Header */}
               <div className="card-header">
                 <div className="icon-wrapper" style={{ color: reason.color }}>
-                  <div className="icon-bg" style={{ backgroundColor: `${reason.color}20` }}>
+                  <div
+                    className="icon-bg"
+                    style={{ backgroundColor: `${reason.color}20` }}
+                  >
                     {reason.icon}
                   </div>
-                  <div className="icon-glow" style={{ background: reason.color }}></div>
+                  <div
+                    className="icon-glow"
+                    style={{ background: reason.color }}
+                  ></div>
                 </div>
                 <div className="card-stat">
                   <span className="stat-number">{reason.stat}</span>
@@ -260,11 +337,14 @@ export default function WhyChooseUs() {
               <div className="card-content">
                 <h3>{reason.title}</h3>
                 <p>{reason.description}</p>
-                
+
                 <ul className="features-list">
                   {reason.features.map((feature, idx) => (
                     <li key={idx}>
-                      <FaCheckCircle className="check-icon" style={{ color: reason.color }} />
+                      <FaCheckCircle
+                        className="check-icon"
+                        style={{ color: reason.color }}
+                      />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -274,50 +354,53 @@ export default function WhyChooseUs() {
               {/* Card Footer */}
               <div className="card-footer">
                 <div className="progress-bar">
-                  <div 
-                    className="progress-fill" 
-                    style={{ 
+                  <div
+                    className="progress-fill"
+                    style={{
                       backgroundColor: reason.color,
-                      width: isVisible ? '100%' : '0%',
-                      transition: 'width 1s ease'
+                      width: isVisible ? "100%" : "0%",
+                      transition: "width 1s ease",
                     }}
                   ></div>
                 </div>
               </div>
 
               {/* Hover Effect */}
-              <div className="card-hover-effect" style={{ background: reason.color }}></div>
+              <div
+                className="card-hover-effect"
+                style={{ background: reason.color }}
+              ></div>
             </div>
           ))}
         </div>
 
         {/* Principles Section */}
-        <div 
+        <div
           className="principles-section"
-          style={{ 
+          style={{
             opacity: isVisible ? 1 : 0,
-            transition: 'opacity 0.8s ease 0.6s'
+            transition: "opacity 0.8s ease 0.6s",
           }}
         >
           <div className="principles-header">
-            <h3>Nossos Princípios</h3>
-            <p>Valores que guiam cada linha de código e cada decisão</p>
+            <h3>Nossos Compromissos com Você</h3>
+            <p>Valores que guiam cada projeto e cada conversa</p>
           </div>
-          
+
           <div className="principles-grid">
             {principles.map((principle, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="principle-item"
                 style={{
                   opacity: isVisible ? 1 : 0,
-                  transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-                  transition: `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`
+                  transform: isVisible ? "translateY(0)" : "translateY(20px)",
+                  transition: `opacity 0.5s ease ${
+                    index * 0.1
+                  }s, transform 0.5s ease ${index * 0.1}s`,
                 }}
               >
-                <div className="principle-icon">
-                  {principle.icon}
-                </div>
+                <div className="principle-icon">{principle.icon}</div>
                 <span>{principle.text}</span>
               </div>
             ))}
@@ -325,53 +408,73 @@ export default function WhyChooseUs() {
         </div>
 
         {/* CTA Section */}
-        <div 
+        <div
           className="cta-section"
-          style={{ 
+          style={{
             opacity: isVisible ? 1 : 0,
-            transform: isVisible ? 'scale(1)' : 'scale(0.95)',
-            transition: 'opacity 0.6s ease 0.8s, transform 0.6s ease 0.8s'
+            transform: isVisible ? "scale(1)" : "scale(0.95)",
+            transition: "opacity 0.6s ease 0.8s, transform 0.6s ease 0.8s",
           }}
         >
           <div className="cta-content">
-            <h3>Pronto para uma Parceria de Verdade?</h3>
-            <p>Vamos transformar suas ideias em soluções digitais de sucesso.</p>
-            
-            <div className="cta-buttons">
-              <a 
-                href="https://api.whatsapp.com/send?phone=5541996745640&text=Ol%C3%A1!%20gostaria%20de%20saber%20porque%20escolher%20voc%C3%AAs"
-                className="cta-button primary"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaHandshake className="button-icon" />
-                Agendar Conversa
-              </a>
-              <a href="#portfolio" className="cta-button secondary">
-                <FiArrowRight className="button-icon" />
-                Ver Casos de Sucesso
-              </a>
+            <div className="cta-text-image-container">
+              <div className="cta-text-content">
+                <h3>Pronto para uma Experiência Digital Sem Complicação?</h3>
+                <p className="cta-subtitle">
+                  Transformamos sua ideia em realidade digital com simplicidade
+                  e transparência
+                </p>
+
+                <div className="cta-buttons">
+                  <a
+                    href="https://api.whatsapp.com/send?phone=5555999293516&text=Ol%C3%A1!%20Vi%20que%20voc%C3%AAs%20entendem%20quem%20est%C3%A1%20come%C3%A7ando%20no%20digital.%20Podemos%20conversar?"
+                    className="cta-button primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaHandshake className="button-icon" />
+                    Conversar sem Compromisso
+                  </a>
+                  <a href="/portfolio" className="cta-button secondary">
+                    <FiArrowRight className="button-icon" />
+                    Ver Projetos Similares
+                  </a>
+                </div>
+              </div>
+
+              <div className="cta-image-container">
+                <img
+                  src={Iago}
+                  alt="Cardial Tech - Equipe especializada em tecnologia acessível"
+                  className="cta-profile-image"
+                />
+              
+              </div>
             </div>
           </div>
         </div>
 
         {/* Testimonial Preview */}
-        <div 
+        <div
           className="testimonial-preview"
-          style={{ 
+          style={{
             opacity: isVisible ? 1 : 0,
-            transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-            transition: 'opacity 0.6s ease 1s, transform 0.6s ease 1s'
+            transform: isVisible ? "translateY(0)" : "translateY(30px)",
+            transition: "opacity 0.6s ease 1s, transform 0.6s ease 1s",
           }}
         >
           <div className="quote-icon">"</div>
           <p className="testimonial-text">
-            Trabalhar com essa equipe foi transformador. Não apenas entregaram 
-            o projeto perfeitamente, mas se tornaram verdadeiros parceiros do nosso crescimento.
+          Como programador que também é empreendedor, entendo as duas pontas: 
+    a complexidade técnica e a necessidade de resultados claros. Na Cardial, criamos 
+    essa ponte - traduzimos tecnologia para quem está começando e entregamos 
+    soluções que realmente funcionam, com a transparência que eu mesmo buscaria.
           </p>
           <div className="client-info">
-            <span className="client-name">Carlos Silva</span>
-            <span className="client-role">CEO, TechSolutions</span>
+            <span className="client-name">Thalis Antunes</span>
+            <span className="client-role">
+              Fundador da Cardial I.T
+            </span>
           </div>
         </div>
       </div>
