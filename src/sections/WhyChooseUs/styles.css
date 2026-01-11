@@ -588,10 +588,16 @@
   gap: 10px;
   margin-bottom: 10px;
   font-size: 0.9rem;
-  color: var(--wc-text-light);
+  color: var(--wc-text);
   opacity: 0;
   transform: translateX(-10px);
   animation: wc-slideIn 0.3s ease forwards;
+}
+
+.why-choose-us .features-list li span {
+
+  color: var(--wc-text);
+
 }
 
 @keyframes wc-slideIn {
