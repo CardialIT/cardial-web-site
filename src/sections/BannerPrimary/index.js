@@ -79,7 +79,7 @@ function Highlights() {
             style={{ height: 60, width: 250 }}
           >
             <button className="button-primary">
-              <a href="https://api.whatsapp.com/send?phone=5541996745640&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)">
+              <a href="https://api.whatsapp.com/send?phone=5555992935160&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)">
                 Fale Conosco
                 <FiSend className="icon-send" />
               </a>

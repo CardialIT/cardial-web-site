@@ -47,23 +47,9 @@ function Testimonials() {
       linkLabel: "Ver na Play Store",
       icon: <FaLeaf />
     },
+    
     {
       id: 2,
-      name: "Adriana Rudá",
-      company: "Adriana Rudá Imóveis",
-      role: "Corretora de Imóveis",
-      project: "Site Institucional",
-      category: "web",
-      quote: "Meu site não apenas trouxe mais visibilidade, mas profissionalizou meu trabalho. As ligações aumentaram 150% e fechei 3 contratos importantes no primeiro mês após o lançamento.",
-      rating: 5,
-      avatar: "AR",
-      color: "#9B59B6",
-      link: "https://www.adriarrudaimoveis.com.br/",
-      linkLabel: "Visitar Site",
-      icon: <FaHome />
-    },
-    {
-      id: 3,
       name: "Maykel",
       company: "Transportes Maykel",
       role: "Proprietário",
@@ -77,81 +63,7 @@ function Testimonials() {
       linkLabel: "Em desenvolvimento",
       icon: <FaTruck />
     },
-    {
-      id: 4,
-      name: "Marcus",
-      company: "Clínica Cleuza Canan",
-      role: "Diretor Administrativo",
-      project: "App Terapêutico",
-      category: "mobile",
-      quote: "A solução desenvolvida pela Cardial melhorou drasticamente nosso acompanhamento terapêutico. Agora temos controle preciso das atividades e progresso dos pacientes. A equipe está muito mais organizada.",
-      rating: 5,
-      avatar: "MC",
-      color: "#2ECC71",
-      link: "#",
-      linkLabel: "App interno",
-      icon: <FaHeartbeat />
-    },
-    {
-      id: 5,
-      name: "Hiago",
-      company: "Sindicato do Comércio",
-      role: "Presidente",
-      project: "App de Pontuações",
-      category: "mobile",
-      quote: "Parceria excelente com a Cardial. O app de benefícios para nossos associados aumentou o engajamento em 80%. A gamificação foi um diferencial que nossos lojistas adoraram.",
-      rating: 5,
-      avatar: "HI",
-      color: "#3498DB",
-      link: "#",
-      linkLabel: "Em breve",
-      icon: <FaStore />
-    },
-    {
-      id: 6,
-      name: "Emerson",
-      company: "PampaTec",
-      role: "CEO",
-      project: "Automação Industrial",
-      category: "automation",
-      quote: "A Cardial desenvolveu uma solução de automação que integrou nossos sistemas de produção. O web scraping e as integrações personalizadas otimizaram nossos processos em 40%. Profissionais muito competentes.",
-      rating: 5,
-      avatar: "EM",
-      color: "#F39C12",
-      link: "#",
-      linkLabel: "Sistema interno",
-      icon: <FaIndustry />
-    },
-    {
-      id: 7,
-      name: "Carlos",
-      company: "AgroConsult",
-      role: "Consultor Agrícola",
-      project: "Plataforma Agrônomo",
-      category: "saas",
-      quote: "A plataforma desenvolvida superou todas expectativas. Posso gerenciar múltiplas fazendas, emitir relatórios técnicos e fazer recomendações personalizadas. Meus clientes estão impressionados.",
-      rating: 5,
-      avatar: "CA",
-      color: "#16A085",
-      link: "https://plataforma-agronomo.vercel.app/",
-      linkLabel: "Ver demonstração",
-      icon: <FaLeaf />
-    },
-    { 
-      id: 8,
-      name: "Roberta",
-      company: "Moda Express",
-      role: "Gerente de E-commerce",
-      project: "Marketplace PDV",
-      category: "saas",
-      quote: "O sistema PDV multi-vendedor mudou nosso negócio. Agora conseguimos escalar sem perder o controle. A integração com múltiplos gateways de pagamento foi perfeita. Recomendo a Cardial!",
-      rating: 5,
-      avatar: "RO",
-      color: "#8E44AD",
-      link: "https://front-pdv-two.vercel.app/",
-      linkLabel: "Testar sistema",
-      icon: <FaStore />
-    }
+      
   ];
 
   const categories = [
@@ -193,57 +105,15 @@ function Testimonials() {
     <div className="testimonials-container">
       <ReactWhatsappButton 
         countryCode="55" 
-        phoneNumber="41996745640" 
+        phoneNumber="55999293516" 
         className="whatsapp-button"
       />
-      <NavBar />
+    
       
       <main className="testimonials-main">
-        {/* Hero Section */}
-        <section className="testimonials-hero">
-          <div className="hero-content">
-            <h1 className="hero-title">
-              A <span className="gradient-text">Voz</span> dos Nossos 
-              <span className="gradient-text"> Clientes</span>
-            </h1>
-            <p className="hero-subtitle">
-              Histórias reais de transformação digital. Conheça os resultados que 
-              nossos clientes alcançaram com as soluções da Cardial.
-            </p>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="stats-section">
-          <div className="stats-grid">
-            {stats.map((stat, index) => (
-              <div key={index} className="stat-card" style={{ borderLeftColor: stat.color }}>
-                <div className="stat-value">{stat.value}</div>
-                <div className="stat-label">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Categories Filter */}
-        <section className="categories-section">
-          <h2 className="section-title">Depoimentos por Categoria</h2>
-          <div className="categories-filter">
-            {categories.map(category => (
-              <button
-                key={category.id}
-                className={`filter-btn ${activeFilter === category.id ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveFilter(category.id);
-                  setActiveIndex(0);
-                }}
-              >
-                <span className="filter-icon">{category.icon}</span>
-                <span className="filter-label">{category.label}</span>
-              </button>
-            ))}
-          </div>
-        </section>
+    
+       
+ 
 
         {/* Featured Testimonial */}
         <section className="featured-section">
@@ -400,7 +270,7 @@ function Testimonials() {
             
             <div className="cta-buttons">
               <a 
-                href="https://api.whatsapp.com/send?phone=5541996745640&text=Olá! Gostaria de conversar sobre um projeto como os que vi nos depoimentos"
+                href="https://api.whatsapp.com/send?phone=5555992935160&text=Olá! Gostaria de conversar sobre um projeto como os que vi nos depoimentos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-button primary"
@@ -410,7 +280,7 @@ function Testimonials() {
               </a>
               
               <a 
-                href="https://api.whatsapp.com/send?phone=5541996745640&text=Olá! Gostaria de falar com algum dos clientes para referência"
+                href="https://api.whatsapp.com/send?phone=5555992935160&text=Olá! Gostaria de falar com algum dos clientes para referência"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-button secondary"
@@ -448,7 +318,7 @@ function Testimonials() {
         </section>
       </main>
 
-      <Footer />
+    
     </div>
   );
 }

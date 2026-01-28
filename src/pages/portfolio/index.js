@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import NavBar from "../../sections/NavBar";
 import Footer from "../../sections/Footer";
+import Testimonials from "../../sections/Testimonials";
 import ReactWhatsappButton from "react-whatsapp-button";
+import cleuzaImg from "../../assets/cleuza.png";
+import adrianaImg from "../../assets/adriana.png";
+import laurenceImg from "../../assets/laurence.png";
+import maykelImg from "../../assets/maykel.png";    
 import "./styles.css";
 import { 
   FaMobileAlt, 
@@ -46,7 +51,7 @@ function Portfolio() {
       category: "mobile",
       client: "Agroindústria",
       description: "Aplicativo para gestão de produção leiteira com controle de rebanho, produção e qualidade.",
-      image: "https://via.placeholder.com/400x250/4A90E2/FFFFFF?text=Ruminar+Leite",
+      image: laurenceImg,
       features: ["Controle de Rebanho", "Gestão de Produção", "Relatórios Avançados", "Offline Sync"],
       price: "R$ 8.500 + R$ 400/mês",
       status: "publicado",
@@ -59,7 +64,7 @@ function Portfolio() {
       category: "web",
       client: "Corretora de Imóveis",
       description: "Site institucional com catálogo de imóveis, SEO otimizado e design responsivo premium.",
-      image: "https://via.placeholder.com/400x250/9B59B6/FFFFFF?text=Adriana+Corretora",
+     image: adrianaImg,
       features: ["Catálogo de Imóveis", "SEO Avançado", "Design Responsivo", "Formulário de Contato"],
       price: "R$ 5.900 + R$ 300/mês",
       status: "publicado",
@@ -72,7 +77,7 @@ function Portfolio() {
       category: "saas",
       client: "Transportadora",
       description: "Sistema completo para gestão de frotas, rastreamento e logística inteligente.",
-      image: "https://via.placeholder.com/400x250/E74C3C/FFFFFF?text=Truckage+System",
+      image: maykelImg,
       features: ["Gestão de Frotas", "Rastreamento GPS", "Cálculo de Rotas", "Relatórios Financeiros"],
       price: "R$ 12.000 + R$ 600/mês",
       status: "desenvolvimento",
@@ -84,63 +89,63 @@ function Portfolio() {
       category: "mobile",
       client: "Clínica Terapêutica",
       description: "Aplicativo para gestão terapêutica com acompanhamento de pacientes e tarefas.",
-      image: "https://via.placeholder.com/400x250/2ECC71/FFFFFF?text=Clínica+Cleuza",
+     image: cleuzaImg,
       features: ["Gestão de Pacientes", "Agendamentos", "Tarefas Terapêuticas", "Relatórios"],
       price: "R$ 7.500 + R$ 350/mês",
       status: "publicado",
       badge: "🏥 Em Produção"
     },
-    {
-      id: 5,
-      title: "Marketplace PDV",
-      category: "saas",
-      client: "Varejo",
-      description: "Plataforma completa de marketplace com PDV integrado e gestão de múltiplos vendedores.",
-      image: "https://via.placeholder.com/400x250/F39C12/FFFFFF?text=Marketplace+PDV",
-      features: ["PDV Completo", "Multi-vendedores", "Gestão de Estoque", "Relatórios"],
-      price: "R$ 15.000 + R$ 800/mês",
-      status: "disponivel",
-      demo: "https://front-pdv-two.vercel.app/",
-      badge: "🛒 Demonstração Online"
-    },
-    {
-      id: 6,
-      title: "Plataforma Agronomo",
-      category: "saas",
-      client: "Agronegócio",
-      description: "Sistema especializado para consultoria agronômica com gestão de fazendas e cultivos.",
-      image: "https://via.placeholder.com/400x250/16A085/FFFFFF?text=Plataforma+Agrônomo",
-      features: ["Gestão de Fazendas", "Controle de Cultivos", "Recomendações Técnicas", "Relatórios"],
-      price: "R$ 10.500 + R$ 500/mês",
-      status: "disponivel",
-      demo: "https://plataforma-agronomo.vercel.app/",
-      badge: "🌱 Demonstração Online"
-    },
-    {
-      id: 7,
-      title: "E-commerce Multi-vendedor",
-      category: "saas",
-      client: "Marketplace",
-      description: "Plataforma de e-commerce escalável para múltiplos vendedores com sistema de comissões.",
-      image: "https://via.placeholder.com/400x250/8E44AD/FFFFFF?text=E-commerce+Multi",
-      features: ["Multi-vendedores", "Sistema de Comissões", "Checkout Seguro", "Dashboard Admin"],
-      price: "R$ 18.000 + R$ 900/mês",
-      status: "disponivel",
-      demo: "https://e-commerce-one-nu-49.vercel.app/",
-      badge: "🏪 Loja Online"
-    },
-    {
-      id: 8,
-      title: "App Sindicato de Lojas",
-      category: "mobile",
-      client: "Sindicato Comercial",
-      description: "Sistema de pontuação e benefícios para associados com gamificação e recompensas.",
-      image: "https://via.placeholder.com/400x250/3498DB/FFFFFF?text=App+Sindicato",
-      features: ["Sistema de Pontos", "Gamificação", "Benefícios", "Notificações Push"],
-      price: "R$ 9.000 + R$ 450/mês",
-      status: "em-breve",
-      badge: "🎮 Em Breve"
-    }
+    // {
+    //   id: 5,
+    //   title: "Marketplace PDV",
+    //   category: "saas",
+    //   client: "Varejo",
+    //   description: "Plataforma completa de marketplace com PDV integrado e gestão de múltiplos vendedores.",
+    //   image: "https://via.placeholder.com/400x250/F39C12/FFFFFF?text=Marketplace+PDV",
+    //   features: ["PDV Completo", "Multi-vendedores", "Gestão de Estoque", "Relatórios"],
+    //   price: "R$ 15.000 + R$ 800/mês",
+    //   status: "disponivel",
+    //   demo: "https://front-pdv-two.vercel.app/",
+    //   badge: "🛒 Demonstração Online"
+    // },
+    // {
+    //   id: 6,
+    //   title: "Plataforma Agronomo",
+    //   category: "saas",
+    //   client: "Agronegócio",
+    //   description: "Sistema especializado para consultoria agronômica com gestão de fazendas e cultivos.",
+    //   image: "https://via.placeholder.com/400x250/16A085/FFFFFF?text=Plataforma+Agrônomo",
+    //   features: ["Gestão de Fazendas", "Controle de Cultivos", "Recomendações Técnicas", "Relatórios"],
+    //   price: "R$ 10.500 + R$ 500/mês",
+    //   status: "disponivel",
+    //   demo: "https://plataforma-agronomo.vercel.app/",
+    //   badge: "🌱 Demonstração Online"
+    // },
+    // {
+    //   id: 7,
+    //   title: "E-commerce Multi-vendedor",
+    //   category: "saas",
+    //   client: "Marketplace",
+    //   description: "Plataforma de e-commerce escalável para múltiplos vendedores com sistema de comissões.",
+    //   image: "https://via.placeholder.com/400x250/8E44AD/FFFFFF?text=E-commerce+Multi",
+    //   features: ["Multi-vendedores", "Sistema de Comissões", "Checkout Seguro", "Dashboard Admin"],
+    //   price: "R$ 18.000 + R$ 900/mês",
+    //   status: "disponivel",
+    //   demo: "https://e-commerce-one-nu-49.vercel.app/",
+    //   badge: "🏪 Loja Online"
+    // },
+    // {
+    //   id: 8,
+    //   title: "App Sindicato de Lojas",
+    //   category: "mobile",
+    //   client: "Sindicato Comercial",
+    //   description: "Sistema de pontuação e benefícios para associados com gamificação e recompensas.",
+    //   image: "https://via.placeholder.com/400x250/3498DB/FFFFFF?text=App+Sindicato",
+    //   features: ["Sistema de Pontos", "Gamificação", "Benefícios", "Notificações Push"],
+    //   price: "R$ 9.000 + R$ 450/mês",
+    //   status: "em-breve",
+    //   badge: "🎮 Em Breve"
+    // }
   ];
 
   const services = [
@@ -148,28 +153,22 @@ function Portfolio() {
       title: "Desenvolvimento de Apps",
       description: "Apps nativos e híbridos para iOS e Android",
       icon: <FaMobileAlt />,
-      price: "A partir de R$ 6.000",
+      price: "A partir de R$ 10.000",
       features: ["UI/UX Design", "Desenvolvimento", "Publicação", "Manutenção"]
     },
     {
       title: "Sites & Sistemas Web",
       description: "Sites responsivos e sistemas web sob medida",
       icon: <FaDesktop />,
-      price: "A partir de R$ 4.500",
+      price: "A partir de R$ 10.000",
       features: ["Design Responsivo", "SEO Otimizado", "Hospedagem", "Suporte"]
     },
-    {
-      title: "Sistemas SAAS",
-      description: "Plataformas em nuvem escaláveis",
-      icon: <FaCloud />,
-      price: "A partir de R$ 10.000",
-      features: ["Multi-tenant", "API Rest", "Dashboard", "Escalabilidade"]
-    },
+   
     {
       title: "Automação de Processos",
       description: "Robôs e integrações inteligentes",
       icon: <FaRobot />,
-      price: "R$ 30/hora + infra",
+      price: "A partir de R$ 5.000",
       features: ["Web Scraping", "Integrações", "Chatbots", "Workflows"]
     }
   ];
@@ -182,7 +181,7 @@ function Portfolio() {
     <div className="portfolio-container">
       <ReactWhatsappButton 
         countryCode="55" 
-        phoneNumber="41996745640" 
+        phoneNumber="55999293516" 
         className="whatsapp-button"
       />
       <NavBar />
@@ -250,6 +249,8 @@ function Portfolio() {
             </div>
           </div>
         </section>
+
+        <Testimonials/>
 
         {/* Categories Filter */}
         <section className="portfolio-categories">
@@ -352,7 +353,7 @@ function Portfolio() {
                       
                       {!project.playStore && !project.website && !project.demo && (
                         <a 
-                          href="https://api.whatsapp.com/send?phone=5541996745640&text=Olá! Gostaria de saber mais sobre este projeto"
+                          href="https://api.whatsapp.com/send?phone=5555992935160&text=Olá! Gostaria de saber mais sobre este projeto"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="action-btn whatsapp-btn"
@@ -409,7 +410,7 @@ function Portfolio() {
                 </div>
                 
                 <a 
-                  href="https://api.whatsapp.com/send?phone=5541996745640&text=Olá! Gostaria de saber mais sobre os planos"
+                  href="https://api.whatsapp.com/send?phone=5555992935160&text=Olá! Gostaria de saber mais sobre os planos"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="pricing-cta"
@@ -455,7 +456,7 @@ function Portfolio() {
             
             <div className="cta-buttons">
               <a 
-                href="https://api.whatsapp.com/send?phone=5541996745640&text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto"
+                href="https://api.whatsapp.com/send?phone=5555992935160&text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-button primary"
@@ -465,7 +466,7 @@ function Portfolio() {
               </a>
               
               <a 
-                href="https://api.whatsapp.com/send?phone=5541996745640&text=Olá! Gostaria de agendar uma demonstração dos seus sistemas"
+                href="https://api.whatsapp.com/send?phone=5555992935160&text=Olá! Gostaria de agendar uma demonstração dos seus sistemas"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-button secondary"

@@ -135,7 +135,7 @@ function AboutUs() {
     <div className="about-container">
       <ReactWhatsappButton 
         countryCode="55" 
-        phoneNumber="41996745640" 
+        phoneNumber="55999293516" 
         className="whatsapp-button"
       />
       <NavBar />
@@ -406,7 +406,7 @@ function AboutUs() {
             
             <div className="cta-buttons">
               <a 
-                href="https://api.whatsapp.com/send?phone=5541996745640&text=Olá! Gostaria de conhecer mais sobre a Cardial e possíveis parcerias"
+                href="https://api.whatsapp.com/send?phone=5555992935160&text=Olá! Gostaria de conhecer mais sobre a Cardial e possíveis parcerias"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-button primary"
@@ -416,7 +416,7 @@ function AboutUs() {
               </a>
               
               <a 
-                href="https://api.whatsapp.com/send?phone=5541996745640&text=Olá! Tenho um projeto e gostaria de uma proposta"
+                href="https://api.whatsapp.com/send?phone=5555992935160&text=Olá! Tenho um projeto e gostaria de uma proposta"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-button secondary"

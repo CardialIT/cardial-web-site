@@ -36,7 +36,7 @@ export default function NavBar() {
     // },
     
     { label: "Portfólio", href: "/portfolio" },
-    { label: "Depoimentos", href: "/testimonials" },
+    // { label: "Depoimentos", href: "/testimonials" },
     { label: "Sobre Nós", href: "/about-us" },
   ];
 
@@ -93,7 +93,7 @@ export default function NavBar() {
         >
           <a
             className="cta-button"
-            href="https://api.whatsapp.com/send?phone=5541996745640&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)"
+            href="https://api.whatsapp.com/send?phone=5555992935160&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -164,7 +164,7 @@ export default function NavBar() {
           <div className="mobile-cta">
             <a
               className="mobile-whatsapp"
-              href="https://api.whatsapp.com/send?phone=5541996745640&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)"
+              href="https://api.whatsapp.com/send?phone=5555992935160&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)"
               target="_blank"
               rel="noopener noreferrer"
               onClick={toggleMenu}
@@ -175,7 +175,7 @@ export default function NavBar() {
             
             <div className="mobile-contact">
               <p>contato@cardial.com</p>
-              <p>(41) 99674-5640</p>
+              <p>(55) 99929-3516</p>
             </div>
           </div>
         </div>

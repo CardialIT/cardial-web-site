@@ -1,106 +1,97 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
+import NavBar from "../../sections/NavBar";
+import Footer from "../../sections/Footer";
+import ReactWhatsappButton from "react-whatsapp-button";
 import "./styles.css";
 import { 
-  FaQuoteLeft, FaQuoteRight, FaStar, FaRegStar,
-  FaChevronLeft, FaChevronRight, FaPlay, FaPause
+  FaQuoteLeft, 
+  FaQuoteRight, 
+  FaStar, 
+  FaRegStar,
+  FaPlay, 
+  FaPause,
+  FaChevronLeft,
+  FaChevronRight,
+  FaWhatsapp,
+  FaExternalLinkAlt,
+  FaDownload,
+  FaIndustry,
+  FaHome,
+  FaTruck,
+  FaHeartbeat,
+  FaStore,
+  FaLeaf,
+  FaUserTie,
+  FaBuilding
 } from "react-icons/fa";
-import { FiCheckCircle, FiTrendingUp, FiUser } from "react-icons/fi";
-import { IoMdBusiness } from "react-icons/io";
+import { FiMessageSquare, FiThumbsUp } from "react-icons/fi";
 
-export default function Testimonials() {
+function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const intervalRef = useRef(null);
-  const sectionRef = useRef(null);
+  const [activeFilter, setActiveFilter] = useState("all");
 
   const testimonials = [
     {
-    quote: "Antes tínhamos anotações em planilhas, hoje temos controle em tempo real da produção e custos.",
-      author: "Laurence Brum",
-     role: "Veterinário",
+      id: 1,
+      name: "Laurence",
+      company: "Ruminar Leite",
+      role: "Veterinário",
+      project: "App Ruminar Leite",
+      category: "mobile",
+      quote: "Excelente profissional, competente e responsável, busca atender todas as expectativas do cliente e não mede esforços para isso, muito acessível, produziu um belo aplicativo para mim, extremamente complicado de produzi-lo, mas fez isso com excelência, recomendo para todos.",
       rating: 5,
-      avatar: "LB",
-      company: "Ruminar",
-      color: "#b93173",
-      features: ["App Mobile"]
+      avatar: "LA",
+      color: "#4A90E2",
+      link: "https://play.google.com/store/apps/details?id=com.thalis.ruminar_leite&hl=pt_BR",
+      linkLabel: "Ver na Play Store",
+      icon: <FaLeaf />
     },
+    
     {
-      quote: "A solução desenvolvida pela Cardial melhorou drasticamente nosso acompanhamento terapêutico.",
-      author: "Marcus Vilhena",
-      role: "Marketing Digital",
+      id: 2,
+      name: "Maykel",
+      company: "Transportes Maykel",
+      role: "Proprietário",
+      project: "Sistema Truckage",
+      category: "saas",
+      quote: "A empresa está de parabéns pelos serviços executados, superou nossas expectativas, tornando nosso sonho do app, em realidade. Obrigado ao Thalis e a todo o pessoal da Cardial, pelo empenho em nos auxiliar e tornar tudo isso possível, que nossa parceria, só cresça, daqui pra frente!",
       rating: 5,
-      avatar: "MV",
-      company: "Clínica Cleuza Canan",
-      color: "#b93173",
-      features: ["App Mobile"]
+      avatar: "MA",
+      color: "#E74C3C",
+      link: "#",
+      linkLabel: "Em desenvolvimento",
+      icon: <FaTruck />
     },
-   
+      
   ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+  const categories = [
+    { id: "all", label: "Todos", icon: <FaStar /> },
+    { id: "mobile", label: "Apps Mobile", icon: <FaDownload /> },
+    { id: "web", label: "Sites Web", icon: <FaExternalLinkAlt /> },
+    { id: "saas", label: "Sistemas SAAS", icon: <FaBuilding /> },
+    { id: "automation", label: "Automação", icon: <FaIndustry /> }
+  ];
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+  const stats = [
+    { value: "98%", label: "Satisfação dos Clientes", color: "#10b981" },
+    { value: "150%", label: "Crescimento em Eficiência", color: "#2563eb" },
+    { value: "40%", label: "Redução de Custos", color: "#8b5cf6" },
+    { value: "80%", label: "Aumento em Engajamento", color: "#f59e0b" }
+  ];
 
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (isPlaying && isVisible) {
-      intervalRef.current = setInterval(() => {
-        setActiveIndex((prev) => (prev + 1) % testimonials.length);
-      }, 5000);
-    }
-
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, [isPlaying, isVisible, testimonials.length]);
+  const filteredTestimonials = activeFilter === "all" 
+    ? testimonials 
+    : testimonials.filter(t => t.category === activeFilter);
 
   const nextTestimonial = () => {
-    setActiveIndex((prev) => (prev + 1) % testimonials.length);
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
+    setActiveIndex((prev) => (prev + 1) % filteredTestimonials.length);
   };
 
   const prevTestimonial = () => {
-    setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
+    setActiveIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length);
   };
-
-  const toggleAutoplay = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  const goToTestimonial = (index) => {
-    setActiveIndex(index);
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
-  };
-
-  const stats = [
-    { icon: <FiTrendingUp />, value: "150%", label: "Aumento em Eficiência", color: "#b93173" },
-    { icon: <IoMdBusiness />, value: "10+", label: "Projetos Entregues", color: "#b93173" },
-    { icon: <FiUser />, value: "98%", label: "Satisfação", color: "#b93173" }
-  ];
 
   const renderStars = (rating) => {
     return [...Array(5)].map((_, index) => (
@@ -111,69 +102,42 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="testimonials-section" id="depoimentos" ref={sectionRef}>
-      {/* Background Elements */}
-      <div className="testimonials-bg">
-        <div className="bg-blob blob-1"></div>
-        <div className="bg-blob blob-2"></div>
-        <div className="bg-blob blob-3"></div>
-      </div>
-
-      <div className="testimonials-container">
-        {/* Header */}
-        <div 
-          className="section-header"
-          style={{ 
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-            transition: 'opacity 0.6s ease, transform 0.6s ease'
-          }}
-        >
-          <span className="section-badge">DEPOIMENTOS</span>
-          <h2 className="section-title">
-            Histórias de <span className="gradient-text">Sucesso</span> que 
-            <span className="gradient-text"> Inspiram</span>
-          </h2>
-          <p className="section-description">
-            Veja o que nossos clientes têm a dizer sobre as transformações digitais 
-            que realizamos juntos.
-          </p>
-        </div>
-
+    <div className="testimonials-container">
+      <ReactWhatsappButton 
+        countryCode="55" 
+        phoneNumber="55999293516" 
+        className="whatsapp-button"
+      />
+    
+      
+      <main className="testimonials-main">
+    
        
-        {/* Main Testimonial */}
-        <div className="testimonial-main">
-          <div className="testimonial-controls">
-            <button 
-              className="control-btn prev-btn" 
-              onClick={prevTestimonial}
-              aria-label="Depoimento anterior"
-            >
+ 
+
+        {/* Featured Testimonial */}
+        <section className="featured-section">
+          <div className="featured-controls">
+            <button className="control-btn prev-btn" onClick={prevTestimonial}>
               <FaChevronLeft />
             </button>
             
             <button 
               className={`control-btn play-btn ${isPlaying ? 'playing' : ''}`}
-              onClick={toggleAutoplay}
-              aria-label={isPlaying ? "Pausar autoplay" : "Iniciar autoplay"}
+              onClick={() => setIsPlaying(!isPlaying)}
             >
               {isPlaying ? <FaPause /> : <FaPlay />}
             </button>
             
-            <button 
-              className="control-btn next-btn" 
-              onClick={nextTestimonial}
-              aria-label="Próximo depoimento"
-            >
+            <button className="control-btn next-btn" onClick={nextTestimonial}>
               <FaChevronRight />
             </button>
           </div>
 
-          {/* Testimonial Content */}
-          <div className="testimonial-content">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
+          <div className="featured-testimonial">
+            {filteredTestimonials.map((testimonial, index) => (
+              <div 
+                key={testimonial.id} 
                 className={`testimonial-slide ${index === activeIndex ? 'active' : ''}`}
                 style={{ '--slide-color': testimonial.color }}
               >
@@ -185,71 +149,178 @@ export default function Testimonials() {
                 <div className="testimonial-body">
                   <p className="quote-text">{testimonial.quote}</p>
                   
-                  <div className="rating">
-                    {renderStars(testimonial.rating)}
+                  <div className="rating-section">
+                    <div className="stars">
+                      {renderStars(testimonial.rating)}
+                    </div>
                     <span className="rating-text">Excelente</span>
                   </div>
                 </div>
 
-                <div className="testimonial-author">
-                  <div className="author-avatar" style={{ backgroundColor: `${testimonial.color}20` }}>
+                <div className="client-info">
+                  <div className="client-avatar" style={{ backgroundColor: `${testimonial.color}20` }}>
                     <span style={{ color: testimonial.color }}>{testimonial.avatar}</span>
                     <div className="avatar-glow" style={{ background: testimonial.color }}></div>
                   </div>
                   
-                  <div className="author-info">
-                    <h4 className="author-name">{testimonial.author}</h4>
-                    <p className="author-role">{testimonial.role}</p>
-                    <div className="company-badge" style={{ color: testimonial.color }}>
-                      {testimonial.company}
+                  <div className="client-details">
+                    <h3 className="client-name">{testimonial.name}</h3>
+                    <p className="client-role">{testimonial.role}</p>
+                    <p className="client-company">{testimonial.company}</p>
+                    <div className="project-badge" style={{ color: testimonial.color }}>
+                      {testimonial.icon}
+                      <span>{testimonial.project}</span>
                     </div>
+                    
+                    {testimonial.link && testimonial.link !== "#" && (
+                      <a 
+                        href={testimonial.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                      >
+                        <FaExternalLinkAlt />
+                        {testimonial.linkLabel}
+                      </a>
+                    )}
                   </div>
-                </div>
-
-                <div className="testimonial-features">
-                  {testimonial.features.map((feature, idx) => (
-                    <div key={idx} className="feature-tag" style={{ borderColor: testimonial.color }}>
-                      <span style={{ color: testimonial.color }}>{feature}</span>
-                    </div>
-                  ))}
                 </div>
               </div>
             ))}
           </div>
 
+          <div className="testimonial-progress">
+            <div className="progress-bar">
+              <div 
+                className="progress-fill"
+                style={{ 
+                  width: `${((activeIndex + 1) / filteredTestimonials.length) * 100}%`,
+                  backgroundColor: filteredTestimonials[activeIndex]?.color || '#2563eb'
+                }}
+              ></div>
+            </div>
+            <div className="progress-text">
+              {activeIndex + 1} / {filteredTestimonials.length}
+            </div>
+          </div>
+        </section>
 
-   
-        </div>
+        {/* All Testimonials Grid */}
+        <section className="all-testimonials">
+          <h2 className="section-title">Todos os Depoimentos</h2>
+          
+          <div className="testimonials-grid">
+            {filteredTestimonials.map((testimonial) => (
+              <div key={testimonial.id} className="testimonial-card">
+                <div className="card-header">
+                  <div className="client-mini">
+                    <div 
+                      className="mini-avatar" 
+                      style={{ backgroundColor: `${testimonial.color}20`, color: testimonial.color }}
+                    >
+                      {testimonial.avatar}
+                    </div>
+                    <div className="mini-info">
+                      <h4>{testimonial.name}</h4>
+                      <p>{testimonial.role}</p>
+                    </div>
+                  </div>
+                  <div className="project-icon" style={{ color: testimonial.color }}>
+                    {testimonial.icon}
+                  </div>
+                </div>
+                
+                <div className="card-quote">
+                  <FaQuoteLeft className="mini-quote" style={{ color: testimonial.color }} />
+                  <p>{testimonial.quote.substring(0, 150)}...</p>
+                </div>
+                
+                <div className="card-footer">
+                  <div className="mini-rating">
+                    {renderStars(testimonial.rating)}
+                  </div>
+                  
+                  {testimonial.link && testimonial.link !== "#" && (
+                    <a 
+                      href={testimonial.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mini-link"
+                      style={{ color: testimonial.color }}
+                    >
+                      Ver Projeto
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* CTA Section */}
-        <div 
-          className="testimonials-cta"
-          style={{ 
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-            transition: 'opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s'
-          }}
-        >
+        <section className="testimonials-cta">
           <div className="cta-content">
-            <h3>Seja a Próxima História de Sucesso</h3>
-            <p>Vamos transformar sua ideia em uma solução digital que impressiona e converte.</p>
+            <div className="cta-text">
+              <h2>Seja o Próximo a Contar Sua História de Sucesso</h2>
+              <p>
+                Transforme seu negócio com soluções digitais que realmente fazem a diferença. 
+                Junte-se aos nossos clientes satisfeitos.
+              </p>
+            </div>
             
             <div className="cta-buttons">
               <a 
-                href="https://api.whatsapp.com/send?phone=5555999293516&text=Ol%C3%A1!%20gostaria%20de%20ver%20mais%20depoimentos%20e%20saber%20mais"
-                className="cta-button primary"
+                href="https://api.whatsapp.com/send?phone=5555992935160&text=Olá! Gostaria de conversar sobre um projeto como os que vi nos depoimentos"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="cta-button primary"
               >
-                Falar com Especialista
+                <FaWhatsapp />
+                Quero Meu Projeto
               </a>
-              <a href="/testimonials" className="cta-button secondary">
-                Ver Cases Completos
+              
+              <a 
+                href="https://api.whatsapp.com/send?phone=5555992935160&text=Olá! Gostaria de falar com algum dos clientes para referência"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-button secondary"
+              >
+                <FiMessageSquare />
+                Falar com Referências
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+
+        {/* Trust Indicators */}
+        <section className="trust-section">
+          <h3 className="trust-title">Por que nossos clientes confiam na Cardial</h3>
+          
+          <div className="trust-grid">
+            <div className="trust-item">
+              <FiThumbsUp className="trust-icon" />
+              <h4>Compromisso com Resultados</h4>
+              <p>Entregamos não apenas código, mas soluções que geram valor real para seu negócio.</p>
+            </div>
+            
+            <div className="trust-item">
+              <FaUserTie className="trust-icon" />
+              <h4>Suporte Dedicado</h4>
+              <p>Equipe sempre disponível para ajustes, melhorias e suporte técnico especializado.</p>
+            </div>
+            
+            <div className="trust-item">
+              <FaBuilding className="trust-icon" />
+              <h4>Experiência Comprovada</h4>
+              <p>Mais de 15 projetos entregues com sucesso em diversos segmentos do mercado.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+    
+    </div>
   );
 }
+
+export default Testimonials;
