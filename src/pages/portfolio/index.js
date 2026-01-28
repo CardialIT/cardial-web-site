@@ -74,7 +74,7 @@ function Portfolio() {
     {
       id: 3,
       title: "Sistema Truckage",
-      category: "saas",
+      category: "mobile",
       client: "Transportadora",
       description: "Sistema completo para gestão de frotas, rastreamento e logística inteligente.",
       image: maykelImg,
@@ -209,49 +209,9 @@ function Portfolio() {
           </div>
         </section>
 
-        {/* Statistics */}
-        <section className="portfolio-stats">
-          <div className="stats-grid">
-            <div className="stat-card">
-              <div className="stat-icon" style={{ color: '#2563eb' }}>
-                <FaCode />
-              </div>
-              <div className="stat-content">
-                <h3>50+</h3>
-                <p>Projetos Entregues</p>
-              </div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-icon" style={{ color: '#10b981' }}>
-                <FiUsers />
-              </div>
-              <div className="stat-content">
-                <h3>98%</h3>
-                <p>Satisfação do Cliente</p>
-              </div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-icon" style={{ color: '#8b5cf6' }}>
-                <FaMobileAlt />
-              </div>
-              <div className="stat-content">
-                <h3>15+</h3>
-                <p>Apps Publicados</p>
-              </div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-icon" style={{ color: '#f59e0b' }}>
-                <FaCalendarCheck />
-              </div>
-              <div className="stat-content">
-                <h3>24/7</h3>
-                <p>Suporte Disponível</p>
-              </div>
-            </div>
-          </div>
-        </section>
+ 
 
-        <Testimonials/>
+       
 
         {/* Categories Filter */}
         <section className="portfolio-categories">
@@ -370,6 +330,9 @@ function Portfolio() {
             ))}
           </div>
         </section>
+
+
+ <Testimonials/>
 
         {/* Pricing Section */}
         <section className="pricing-section" id="precos">
