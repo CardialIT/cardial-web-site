@@ -70,12 +70,13 @@ function Footer() {
           <h4 className="column-title">Empresa</h4>
           <a href="/about-us" className="footer-link">Sobre Nós</a>
           <a href="/portfolio" className="footer-link">Portfólio</a>
-          <a href="/testimonials" className="footer-link">Depoimentos</a>
+         
         </div>
         
         <div className="footer-column">
           <h4 className="column-title">Recursos</h4>
-          <a href="#blog" className="footer-link">Blog (Em breve)</a>
+         
+         
           <a href="#faq" className="footer-link">FAQ  (Em breve)</a>
         </div>
       </div>

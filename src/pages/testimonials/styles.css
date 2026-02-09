@@ -27,6 +27,10 @@
   margin-bottom: 24px;
 }
 
+.cta-text h2{
+    color: #FFFFFF
+}
+
 .gradient-text {
    background: linear-gradient(45deg, #e05777, #b93173);
   -webkit-background-clip: text;
@@ -165,18 +169,18 @@
 }
 
 .control-btn:hover {
-  background: #2563eb;
+  background: #D35E89;
   color: white;
   transform: scale(1.1);
 }
 
 .play-btn {
-  background: #2563eb;
+  background: #D35E89;
   color: white;
 }
 
 .play-btn:hover {
-  background: #1d4ed8;
+  background: #D35E89;
 }
 
 .featured-testimonial {
@@ -328,11 +332,15 @@
   margin-bottom: 16px;
 }
 
+.project-badge span {
+    color: #000000;
+}
+
 .project-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #2563eb;
+  color: #D35E89;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.875rem;
@@ -340,7 +348,7 @@
 }
 
 .project-link:hover {
-  color: #1d4ed8;
+  color: #D35E89;
   transform: translateX(4px);
 }
 
@@ -593,7 +601,7 @@
 
 .trust-icon {
   font-size: 3rem;
-  color: #2563eb;
+  color: #D35E89;
   margin-bottom: 20px;
 }
 

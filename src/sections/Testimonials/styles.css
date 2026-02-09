@@ -165,18 +165,18 @@
 }
 
 .control-btn:hover {
-  background: #2563eb;
+  background: #D35E89;
   color: white;
   transform: scale(1.1);
 }
 
 .play-btn {
-  background: #2563eb;
+  background: #D35E89;
   color: white;
 }
 
 .play-btn:hover {
-  background: #1d4ed8;
+  background: #D35E89;
 }
 
 .featured-testimonial {

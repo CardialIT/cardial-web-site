@@ -2,41 +2,36 @@ import React, { useState, useEffect } from "react";
 import Tilt from "react-tilt";
 import Logo from "../../assets/passaro-pequeno-fundo-branco.png";
 import "./styles.css";
-import { FiMenu, FiX, FiChevronDown, FiArrowRight } from "react-icons/fi";
+import { FiChevronDown, FiArrowRight } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
+
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', checkMobile);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
   const navItems = [
-    { label: "Início", href: "#home" },
-    // { 
-    //   label: "Serviços", 
-    //   href: "#servicos",
-    //   dropdown: [
-    //     { label: "Desenvolvimento Web", href: "#web" },
-    //     { label: "Apps Mobile", href: "#mobile" },
-    //     { label: "Sistemas SAAS", href: "#saas" },
-    //     { label: "Consultoria Tech", href: "#consultoria" }
-    //   ]
-    // },
-    
+    { label: "Início", href: "/" },
     { label: "Portfólio", href: "/portfolio" },
-    // { label: "Depoimentos", href: "/testimonials" },
     { label: "Sobre Nós", href: "/about-us" },
   ];
 
@@ -51,23 +46,26 @@ export default function NavBar() {
           </a>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="desktop-nav">
+        {/* Navigation - Always visible */}
+        <nav className="main-nav">
           <ul className="nav-list">
             {navItems.map((item, index) => (
               <li 
                 key={index} 
                 className="nav-item"
-                onMouseEnter={() => item.dropdown && setActiveDropdown(index)}
-                onMouseLeave={() => setActiveDropdown(null)}
+                onMouseEnter={() => !isMobile && item.dropdown && setActiveDropdown(index)}
+                onMouseLeave={() => !isMobile && setActiveDropdown(null)}
+                onClick={() => isMobile && item.dropdown && setActiveDropdown(
+                  activeDropdown === index ? null : index
+                )}
               >
                 <a href={item.href} className="nav-link">
                   {item.label}
-                  {item.dropdown && <FiChevronDown className="dropdown-icon" />}
+                  {item.dropdown && <FiChevronDown className={`dropdown-icon ${activeDropdown === index ? 'rotated' : ''}`} />}
                 </a>
                 
-                {item.dropdown && activeDropdown === index && (
-                  <div className="dropdown-menu">
+                {item.dropdown && (
+                  <div className={`dropdown-menu ${activeDropdown === index ? 'active' : ''}`}>
                     {item.dropdown.map((dropdownItem, idx) => (
                       <a 
                         key={idx} 
@@ -85,100 +83,39 @@ export default function NavBar() {
           </ul>
         </nav>
 
-        {/* CTA Button */}
-        <Tilt
-          className="tilt-button"
-          options={{ max: 25, scale: 1.05 }}
-          style={{ height: 50, width: 250 }}
-        >
+        {/* CTA Button - Only on desktop */}
+        {!isMobile && (
+          <div className="cta-section">
+            <Tilt
+              className="tilt-button"
+              options={{ max: 25, scale: 1.05 }}
+              style={{ height: 50, width: 250 }}
+            >
+              <a
+                className="cta-button"
+                href="https://api.whatsapp.com/send?phone=5555992935160&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp className="whatsapp-icon" />
+                Fale Conosco
+              </a>
+            </Tilt>
+          </div>
+        )}
+
+        {/* WhatsApp button for mobile - Simple and small */}
+        {isMobile && (
           <a
-            className="cta-button"
+            className="mobile-whatsapp-button"
             href="https://api.whatsapp.com/send?phone=5555992935160&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="WhatsApp"
           >
-            <FaWhatsapp className="whatsapp-icon" />
-            Fale Conosco
+            <FaWhatsapp />
           </a>
-        </Tilt>
-
-        {/* Mobile Menu Toggle */}
-        <button 
-          className="mobile-toggle" 
-          onClick={toggleMenu}
-          aria-label="Abrir menu"
-        >
-          {isOpen ? <FiX /> : <FiMenu />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
-        <div className="mobile-menu-content">
-          <div className="mobile-header">
-            <div className="mobile-logo">
-              <img src={Logo} alt="Cardial" />
-              <span>Cardial</span>
-            </div>
-            <button 
-              className="mobile-close" 
-              onClick={toggleMenu}
-              aria-label="Fechar menu"
-            >
-              <FiX />
-            </button>
-          </div>
-
-          <nav className="mobile-nav">
-            <ul className="mobile-nav-list">
-              {navItems.map((item, index) => (
-                <li key={index} className="mobile-nav-item">
-                  <a 
-                    href={item.href} 
-                    className="mobile-nav-link"
-                    onClick={toggleMenu}
-                  >
-                    {item.label}
-                    {item.dropdown && <FiChevronDown />}
-                  </a>
-                  
-                  {item.dropdown && (
-                    <div className="mobile-dropdown">
-                      {item.dropdown.map((dropdownItem, idx) => (
-                        <a 
-                          key={idx} 
-                          href={dropdownItem.href}
-                          className="mobile-dropdown-item"
-                          onClick={toggleMenu}
-                        >
-                          {dropdownItem.label}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          <div className="mobile-cta">
-            <a
-              className="mobile-whatsapp"
-              href="https://api.whatsapp.com/send?phone=5555992935160&text=Ol%C3%A1!%20vim%20do%20Site%20da%20Cardial%20;)"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={toggleMenu}
-            >
-              <FaWhatsapp />
-              Conversar no WhatsApp
-            </a>
-            
-            <div className="mobile-contact">
-              <p>contato@cardial.com</p>
-              <p>(55) 99929-3516</p>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </header>
   );

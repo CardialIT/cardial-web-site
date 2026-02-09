@@ -16,15 +16,17 @@ import {
   FaExternalLinkAlt,
   FaDownload,
   FaIndustry,
-  FaHome,
+  
   FaTruck,
   FaHeartbeat,
   FaStore,
   FaLeaf,
   FaUserTie,
-  FaBuilding
+  FaBuilding, 
+  FaHome
 } from "react-icons/fa";
 import { FiMessageSquare, FiThumbsUp } from "react-icons/fi";
+import { FaCow } from "react-icons/fa6";
 
 function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -38,14 +40,14 @@ function Testimonials() {
       company: "Ruminar Leite",
       role: "Veterinário",
       project: "App Ruminar Leite",
-      category: "mobile",
+      category: "Mobile App - Saas",
       quote: "Excelente profissional, competente e responsável, busca atender todas as expectativas do cliente e não mede esforços para isso, muito acessível, produziu um belo aplicativo para mim, extremamente complicado de produzi-lo, mas fez isso com excelência, recomendo para todos.",
       rating: 5,
       avatar: "LA",
-      color: "#4A90E2",
+      color: "#307C31",
       link: "https://play.google.com/store/apps/details?id=com.thalis.ruminar_leite&hl=pt_BR",
       linkLabel: "Ver na Play Store",
-      icon: <FaLeaf />
+      icon: <FaCow />
     },
     
     {
@@ -54,14 +56,30 @@ function Testimonials() {
       company: "Transportes Maykel",
       role: "Proprietário",
       project: "Sistema Truckage",
-      category: "saas",
+      category: "Mobile App - Saas",
       quote: "A empresa está de parabéns pelos serviços executados, superou nossas expectativas, tornando nosso sonho do app, em realidade. Obrigado ao Thalis e a todo o pessoal da Cardial, pelo empenho em nos auxiliar e tornar tudo isso possível, que nossa parceria, só cresça, daqui pra frente!",
       rating: 5,
       avatar: "MA",
       color: "#E74C3C",
-      link: "#",
-      linkLabel: "Em desenvolvimento",
+      link: "https://play.google.com/store/apps/details?id=com.cardial.truckage&hl=pt_BR",
+      linkLabel: "Ver na Play Store",
       icon: <FaTruck />
+    },
+
+     {
+      id: 3,
+      name: "Adriana",
+      company: "Adriana Corretoria",
+      role: "Proprietário",
+      project: "Site da Adriana Corretora",
+      category: "web-site Saas",
+      quote: "Incrivel! Excelente trabalho e excelente profissional",
+      rating: 5,
+      avatar: "AD",
+      color: "#000000",
+      link: "https://www.adriarrudaimoveis.com.br/",
+      linkLabel: "Ver na Web",
+      icon: <FaHome />
     },
       
   ];
@@ -167,10 +185,7 @@ function Testimonials() {
                     <h3 className="client-name">{testimonial.name}</h3>
                     <p className="client-role">{testimonial.role}</p>
                     <p className="client-company">{testimonial.company}</p>
-                    <div className="project-badge" style={{ color: testimonial.color }}>
-                      {testimonial.icon}
-                      <span>{testimonial.project}</span>
-                    </div>
+                 
                     
                     {testimonial.link && testimonial.link !== "#" && (
                       <a 

@@ -3,6 +3,8 @@ import NavBar from "../../sections/NavBar";
 import Footer from "../../sections/Footer";
 import ReactWhatsappButton from "react-whatsapp-button";
 import "./styles.css";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
 import { 
   FaRocket, 
   FaUsers, 
@@ -23,46 +25,51 @@ import { FiTarget, FiTrendingUp, FiAward, FiCalendar } from "react-icons/fi";
 import { GiBrazil, GiSouthAmericaFlag } from "react-icons/gi";
 
 function AboutUs() {
+  // Inicializar partículas
+  const particlesInit = async (engine) => {
+    await loadSlim(engine);
+  };
+
   const timeline = [
     {
       year: "2023",
       title: "O Nascimento da Ideia",
-      description: "A intuição empreendedora surgiu com o conhecimento em programação do fundador Thalis e a vontade de Iago em aprender na prática. O primeiro projeto foi desenvolvido para um dentista em Alegrete/RS.",
+      description: "A intuição empreendedora surgiu com o conhecimento em programação do fundador e a vontade do co-fundador em evoluir na prática. O primeiro projeto foi desenvolvido como saas da Cardial inicialmente sendo uma Aplicativo para fidelizar clientes",
       icon: <FaSeedling />,
       location: "Alegrete - RS",
-      color: "#2563eb"
+      color: "#D35E89"
     },
     {
       year: "2023",
       title: "Feira do Empreendedor & CNPJ",
       description: "Participação na Feira do Empreendedor de 2023 onde concretizamos a ideia e formalizamos a empresa com abertura do CNPJ da Cardial I.T.",
       icon: <FaHandshake />,
-      location: "Alegrete - RS",
-      color: "#10b981"
+      location: "Curitiba - PR",
+      color: "#D35E89"
     },
     {
       year: "2024",
-      title: "Expansão para Curitiba",
-      description: "Com o retorno de Thalis para Alegrete, a empresa começou a conquistar seus primeiros clientes em Curitiba, acumulando experiência e credibilidade no mercado.",
+      title: "Amadurecimento",
+      description: "Com o retorno para Alegrete/RS, a empresa foi pré-encubada pelo Pampatec, além disso, começou a conquistar seus primeiros clientes em Curitiba/PR e Alegrete/RS. Foi montado a primeira squad da Cardial I.T, acumulando experiência para os profissionais e credibilidade no mercado para a empresa.",
       icon: <FaChartLine />,
       location: "Curitiba - PR",
-      color: "#8b5cf6"
+      color: "#D35E89"
     },
     {
       year: "2025",
       title: "A Ascensão Nacional",
-      description: "Ano marcante com 3 apps desenvolvidos (2 em Alegrete, 1 em Curitiba), 1 site em Caruaru/PE e 1 automação em Uruguaiana/RS. Crescimento nacional consolidado.",
+      description: "Ano marcante com 3 apps desenvolvidos (2 em Alegrete/RS, 1 em Curitiba/PR), 1 site em Caruaru/PE e 1 automação em Uruguaiana/RS. Crescimento nacional consolidado.",
       icon: <FaRocket />,
-      location: "Nacional",
-      color: "#f59e0b"
+      location: "Florianópolis - SC",
+      color: "#D35E89"
     },
     {
       year: "2026",
       title: "Foco em SAAS & Outsourcing",
       description: "Evolução para soluções SAAS escaláveis e oferta de equipe de TI como outsourcing. Preparação para parcerias estratégicas e expansão do portfólio.",
       icon: <FaNetworkWired />,
-      location: "Brasil",
-      color: "#ec4899"
+      location: "Florianópolis - SC",
+      color: "#D35E89"
     }
   ];
 
@@ -71,25 +78,25 @@ function AboutUs() {
       title: "Inovação com Propósito",
       description: "Não seguimos modismos. Desenvolvemos tecnologia que realmente resolve problemas e gera valor.",
       icon: <FaLightbulb />,
-      color: "#3b82f6"
+      color: "#D35E89"
     },
     {
       title: "Aprendizado Contínuo",
       description: "Acreditamos que o crescimento profissional e empresarial vem do constante aprendizado na prática.",
       icon: <FiTrendingUp />,
-      color: "#10b981"
+      color: "#D35E89"
     },
     {
       title: "Parceria de Verdade",
       description: "Não somos apenas prestadores, somos parceiros no sucesso dos nossos clientes.",
       icon: <FaHandshake />,
-      color: "#f59e0b"
+      color: "#D35E89"
     },
     {
       title: "Qualidade Garantida",
       description: "Cada linha de código é escrita com excelência, pensando em performance e manutenibilidade.",
       icon: <FaShieldAlt />,
-      color: "#8b5cf6"
+      color: "#D35E89"
     }
   ];
 
@@ -141,8 +148,92 @@ function AboutUs() {
       <NavBar />
       
       <main className="about-main">
-        {/* Hero Section */}
+        {/* Hero Section com Partículas */}
         <section className="about-hero">
+          <Particles
+            id="tsparticles-about"
+            init={particlesInit}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: 1
+            }}
+            options={{
+              background: {
+                color: {
+                  value: "transparent",
+                },
+              },
+              fpsLimit: 120,
+              interactivity: {
+                events: {
+                  onClick: {
+                    enable: true,
+                    mode: "push",
+                  },
+                  onHover: {
+                    enable: true,
+                    mode: "grab",
+                  },
+                  resize: true,
+                },
+                modes: {
+                  push: {
+                    quantity: 4,
+                  },
+                  grab: {
+                    distance: 200,
+                    line_linked: {
+                      opacity: 0.3
+                    }
+                  },
+                },
+              },
+              particles: {
+                color: {
+                  value: "#ffffff",
+                },
+                links: {
+                  color: "#ffffff",
+                  distance: 150,
+                  enable: true,
+                  opacity: 0.2,
+                  width: 1,
+                },
+                move: {
+                  direction: "none",
+                  enable: true,
+                  outModes: {
+                    default: "bounce",
+                  },
+                  random: false,
+                  speed: 1,
+                  straight: false,
+                },
+                number: {
+                  density: {
+                    enable: true,
+                    area: 800,
+                  },
+                  value: 40,
+                },
+                opacity: {
+                  value: 0.3,
+                },
+                shape: {
+                  type: "circle",
+                },
+                size: {
+                  value: { min: 1, max: 3 },
+                },
+              },
+              detectRetina: true,
+            }}
+          />
+          
           <div className="hero-overlay">
             <div className="hero-content">
               <h1 className="hero-title">
@@ -153,20 +244,7 @@ function AboutUs() {
                 Da intuição à execução, do interior do RS para todo o Brasil. 
                 Conheça nossa jornada de empreendedorismo, tecnologia e crescimento.
               </p>
-              <div className="hero-stats">
-                <div className="stat">
-                  <span className="stat-number">4+</span>
-                  <span className="stat-label">Anos de Experiência</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">15+</span>
-                  <span className="stat-label">Projetos Entregues</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">5</span>
-                  <span className="stat-label">Estados Atendidos</span>
-                </div>
-              </div>
+         
             </div>
           </div>
         </section>
@@ -208,7 +286,7 @@ function AboutUs() {
           </div>
         </section>
 
-        {/* Founders */}
+        {/* Founders
         <section className="founders-section">
           <div className="section-header">
             <h2 className="section-title">
@@ -246,21 +324,8 @@ function AboutUs() {
             ))}
           </div>
 
-          <div className="founders-quote">
-            <div className="quote-content">
-              <FaChartLine className="quote-icon" />
-              <p className="quote-text">
-                "Acreditamos que a tecnologia deve servir às pessoas, não o contrário. 
-                Nossa missão é criar soluções que realmente façam a diferença na vida 
-                dos empreendedores brasileiros."
-              </p>
-              <div className="quote-author">
-                <span>Thalis & Iago</span>
-                <span>Fundadores da Cardial I.T.</span>
-              </div>
-            </div>
-          </div>
-        </section>
+         
+        </section> */}
 
         {/* Values */}
         <section className="values-section">
@@ -341,7 +406,7 @@ function AboutUs() {
           </div>
         </section>
 
-        {/* Geographic Reach */}
+        {/* Geographic Reach
         <section className="reach-section">
           <div className="section-header">
             <h2 className="section-title">
@@ -393,7 +458,7 @@ function AboutUs() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
         <section className="about-cta">

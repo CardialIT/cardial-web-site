@@ -5,7 +5,7 @@
 
 /* Hero Section */
 .portfolio-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #283447;
   padding: 120px 5vw 80px;
   color: white;
   text-align: center;
@@ -36,6 +36,7 @@
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 24px;
+  color: #ffffff
 }
 
 .gradient-text {
@@ -53,6 +54,7 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  color: #ffffff;
 }
 
 .hero-cta {
@@ -60,7 +62,7 @@
   align-items: center;
   gap: 12px;
   background: white;
-  color: #667eea;
+  color: #CE4C7C;
   padding: 16px 32px;
   border-radius: 12px;
   text-decoration: none;
@@ -243,19 +245,19 @@
 }
 
 .status-publicado {
-  background: #10b981;
+  background: #CE4C7C;
 }
 
 .status-desenvolvimento {
-  background: #f59e0b;
+  background: #CE4C7C;
 }
 
 .status-disponivel {
-  background: #3b82f6;
+  background: #CE4C7C;
 }
 
 .status-em-breve {
-  background: #8b5cf6;
+  background: #CE4C7C;
 }
 
 .project-content {
@@ -341,22 +343,22 @@
 }
 
 .store-btn {
-  background: #34d399;
+  background: #CE4C7C;
   color: white;
 }
 
 .website-btn {
-  background: #3b82f6;
+  background: #CE4C7C;
   color: white;
 }
 
 .demo-btn {
-  background: #8b5cf6;
+  background: #CE4C7C;
   color: white;
 }
 
 .whatsapp-btn {
-  background: #25d366;
+  background: #CE4C7C;
   color: white;
 }
 
@@ -412,7 +414,7 @@
 .service-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ background: linear-gradient(135deg, #f590ad 0%, #b93173 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -482,7 +484,7 @@
 }
 
 .check-icon {
-  color: #10b981;
+  color: #CE4C7C;
   font-size: 1rem;
 }
 
@@ -491,7 +493,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #25d366;
+  background: #D35E89;
   color: white;
   padding: 16px;
   border-radius: 12px;
@@ -503,7 +505,7 @@
 }
 
 .pricing-cta:hover {
-  background: #128c7e;
+  background: #dd5d8c;
   transform: translateY(-2px);
 }
 
@@ -560,6 +562,10 @@
 .cta-content {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.cta-content h2, p{
+    color: #ffffff;
 }
 
 .portfolio-cta h2 {

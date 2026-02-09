@@ -26,6 +26,8 @@ import {
 } from "react-icons/fa";
 import { FiMessageSquare, FiThumbsUp } from "react-icons/fi";
 
+import {FaCow} from "react-icons/fa6";
+
 function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -42,10 +44,10 @@ function Testimonials() {
       quote: "O Ruminar Leite revolucionou nossa gestão. Antes tínhamos anotações em cadernos, hoje temos controle em tempo real da produção, saúde do rebanho e custos. Aumentamos 30% na produtividade!",
       rating: 5,
       avatar: "LA",
-      color: "#4A90E2",
+      color: "green",
       link: "https://play.google.com/store/apps/details?id=com.thalis.ruminar_leite&hl=pt_BR",
       linkLabel: "Ver na Play Store",
-      icon: <FaLeaf />
+      icon: <FaCow />
     },
     
     {
