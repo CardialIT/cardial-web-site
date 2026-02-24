@@ -5,6 +5,7 @@ import TermsRuminar from "./pages/terms-ruminar";
 import ResetSenha from "./pages/reset-senha";
 import PrivacyTruckage from "./pages/terms-truckage";
 import PrivacyClinic from "./pages/terms-cleuza";
+import PrivacyIndiki from "./pages/terms-indiki";
 import Portfolio from "./pages/portfolio";
 import Aboutus from "./pages/aboutus";
 import Testimonials from "./pages/testimonials";
@@ -19,6 +20,7 @@ function App() {
             <Route path="/privacy-truckage" element={<PrivacyTruckage />} />
             <Route path="portfolio" element={<Portfolio />} />
              <Route path="/privacy-cleuza" element={<PrivacyClinic />} />
+             <Route path="/privacy-indiki" element={<PrivacyIndiki />} />
               <Route path="/about-us" element={<Aboutus />} />
            <Route path="/reset-senha" element={<ResetSenha />} />
            <Route path="/testimonials" element={<Testimonials />} />
