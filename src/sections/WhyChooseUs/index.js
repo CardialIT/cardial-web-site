@@ -21,7 +21,7 @@ import {
 } from "react-icons/fi";
 import { PiBirdFill } from "react-icons/pi";
 import { IoStatsChart, IoCodeSlash } from "react-icons/io5";
-import Iago from "../../assets/iago.png";
+import ThalisCTA from "../../assets/thalis-cta.jpg";
 
 export default function WhyChooseUs() {
   const [isVisible, setIsVisible] = useState(false);
@@ -444,7 +444,7 @@ export default function WhyChooseUs() {
 
               <div className="cta-image-container">
                 <img
-                  src={Iago}
+                  src={ThalisCTA}
                   alt="Cardial Tech - Equipe especializada em tecnologia acessível"
                   className="cta-profile-image"
                 />
