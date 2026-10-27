@@ -87,7 +87,7 @@ function Footer() {
           <p>&copy; {new Date().getFullYear()} Cardial I.T. Todos os direitos reservados.</p>
           <div className="location">
             <FaMapMarkerAlt className="location-icon" />
-            <span>Florianópolis - Santa Catarina</span>
+            <span>Cidade Baixa, Porto Alegre - RS</span>
           </div>
         </div>
         

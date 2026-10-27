@@ -6,6 +6,7 @@ import OurServices from "../../sections/OurServices/index"; // Renomeado para Ou
 import WhyChooseUs from "../../sections/WhyChooseUs/index"; // Novo componente para "Por que escolher nós?"
 import VideoSection from "../../sections/VideoSection/index"; // Novo componente para seção de vídeo
 import Testimonials from "../../sections/Testimonials/index"; // Novo componente para depoimentos
+import LeadCapture from "../../sections/LeadCapture/index";
 import Footer from "../../sections/Footer/index";
 import ReactWhatsappButton from "react-whatsapp-button";
 import "../../global.css";
@@ -20,6 +21,7 @@ function Home() {
       <WhyChooseUs />
       {/* <VideoSection /> */}
       <Testimonials />
+      <LeadCapture />
       <Footer />
     </div>
   );
